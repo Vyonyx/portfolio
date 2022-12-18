@@ -4,8 +4,20 @@
 
 <section class="relative h-screen flex flex-col font-serif items-center justify-center bg-neutral-900 text-center bg-cover bg-center bg-[url(/swarm-hero.jpg)]">
   <div id="bg-cover" class="absolute w-full h-full top-0 left-0 bg-neutral-900 z-0"></div>
-  <h1 id="myName" class="text-8xl text-white z-10" data-heading>Shaneel Kumar</h1>
-  <span id="currentTitle" class="text-5xl text-white z-10 relative flex" data-heading></span>
+  <h1 id="myName" class="text-8xl text-white z-10">Shaneel Kumar</h1>
+  <span id="currentTitle" class="text-5xl text-white z-10 relative flex"></span>
+  <div id='scrollPrompt' class="z-10 absolute bottom-10 flex flex-col items-center">
+    <span id="scrollMessage" class="text-sm text-white z-10 relative flex"></span>
+    <svg
+      id="arrow"
+      class="cursor-pointer"
+      xmlns="http://www.w3.org/2000/svg"
+      width="50" height="50"
+      fill='#ffffff'
+      viewBox="0 0 24 24">
+        <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
+    </svg>
+  </div>
 </section>
 
 <script>
@@ -19,7 +31,9 @@
   
   const nameElement = document.getElementById('myName') as HTMLHeadElement
   const titleElement = document.getElementById('currentTitle') as HTMLSpanElement
-  const coverElement = document.getElementById('bg-cover')
+  const coverElement = document.getElementById('bg-cover') as HTMLDivElement
+  const arrowElement = document.getElementById('arrow') as HTMLOrSVGElement
+  const scrollMessage = document.getElementById('scrollMessage') as HTMLSpanElement
 
   function removeHeadingLetters(heading: HTMLSpanElement) {
     while (heading.firstChild) {
@@ -43,10 +57,14 @@
   }
 
   appendTitleToHeading()
+  appendLettersToHeading('scroll', scrollMessage)
 
   tl.set('.letter', { opacity: 0, y: 30 })
+  tl.set(arrowElement, { opacity:0, y:100 })
   tl.from(nameElement, { opacity: 0, duration: 1, delay: headingAnimationDelay, ease: 'sine.inOut' })
   tl.to('.letter', { y:0, opacity: 1, stagger:0.075, ease:'easeOut' })
   tl.to(coverElement, { opacity: 0.5, duration: 0.5, ease: 'sine.inOut' }, '<0.5')
+  tl.to(arrowElement, { opacity:1, y:0, duration:1, ease: 'power2' }, 2)
+  tl.to(arrowElement, { y:5, duration:0.5, repeat: -1, yoyo:true, ease:'linear' })
 
 </script>
