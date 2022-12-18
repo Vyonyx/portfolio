@@ -3,7 +3,50 @@
 ---
 
 <section class="relative h-screen flex flex-col font-serif items-center justify-center bg-neutral-900 text-center bg-cover bg-center bg-[url(/swarm-hero.jpg)]">
-  <div class="absolute w-full h-full top-0 left-0 bg-neutral-900 z-0 opacity-70"></div>
-  <h1 class="text-8xl text-white z-10">Shaneel Kumar</h1>
-  <h1 class="text-5xl text-white z-10">Portfolio</h1>
+  <div id="bg-cover" class="absolute w-full h-full top-0 left-0 bg-neutral-900 z-0"></div>
+  <h1 id="myName" class="text-8xl text-white z-10" data-heading>Shaneel Kumar</h1>
+  <span id="currentTitle" class="text-5xl text-white z-10 relative flex" data-heading></span>
 </section>
+
+<script>
+  import gsap from 'gsap'
+  const tl = gsap.timeline({ ease: 'power2' })
+
+  const titles = ['Portfolio', 'Full Stack Developer', 'Designer']
+  const currentTitle = titles[0]
+
+  const headingAnimationDelay = 0.75
+  
+  const nameElement = document.getElementById('myName') as HTMLHeadElement
+  const titleElement = document.getElementById('currentTitle') as HTMLSpanElement
+  const coverElement = document.getElementById('bg-cover')
+
+  function removeHeadingLetters(heading: HTMLSpanElement) {
+    while (heading.firstChild) {
+        heading.removeChild(heading.firstChild)
+      }
+  }
+
+  function appendLettersToHeading(letters:string, heading:HTMLSpanElement) {
+    letters.split('').map(letter => {
+
+      const newLetter = document.createElement('span')
+      newLetter.innerText = letter
+      newLetter.classList.add('letter')
+      heading.appendChild(newLetter)
+    })
+  }
+
+  function appendTitleToHeading() {
+    removeHeadingLetters(titleElement)
+    appendLettersToHeading(currentTitle, titleElement)
+  }
+
+  appendTitleToHeading()
+
+  tl.set('.letter', { opacity: 0, y: 30 })
+  tl.from(nameElement, { opacity: 0, duration: 1, delay: headingAnimationDelay, ease: 'sine.inOut' })
+  tl.to('.letter', { y:0, opacity: 1, stagger:0.075, ease:'easeOut' })
+  tl.to(coverElement, { opacity: 0.5, duration: 0.5, ease: 'sine.inOut' }, '<0.5')
+
+</script>
