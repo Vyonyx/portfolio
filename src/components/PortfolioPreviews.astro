@@ -30,7 +30,8 @@ const projects: Project[] = [
 ]
 ---
 
-<section class="min-h-screen h-fit relative bg-neutral-900 grid grid-cols-1 lg:grid-cols-3 grid-rows-auto justify-items-center place-items-center gap-20 p-20 snap-start">
+<section class="min-h-screen h-fit relative bg-neutral-900 grid grid-cols-1 lg:grid-cols-3 grid-rows-auto justify-items-center place-items-center gap-5 p-10 pt-40 lg:gap-20 lg:p-20 relative">
+  <h1 id="sectionTitle" class="text-4xl text-white lg:absolute lg:top-32">Development</h1>
   {projects.map(({name, thumbnail, description}) => {
     return (
       <div data-card class="w-full h-fit flex flex-col justify-between gap-5 bg-neutral-900 text-white p-10 bg-gradient-to-t from-neutral-800 to-neutral-900">
@@ -55,16 +56,22 @@ const projects: Project[] = [
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: cards,
-      start: 'top center',
+      start: 'top 80%',
       end: 'top 30%',
-      scrub: 4
+      scrub: 2
     },
   })
 
+  tl.from('#sectionTitle', {
+    opacity: 0,
+    duration: 1,
+    y: -100,
+    ease: 'sin.easeInOut'
+  })
   tl.from(cards, {
     opacity: 0,
     duration: 1,
     y: 100,
     ease: 'sin.easeInOut'
-  })
+  }, '<')
 </script>
