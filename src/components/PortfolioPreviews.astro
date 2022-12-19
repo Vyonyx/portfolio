@@ -30,8 +30,8 @@ const projects: Project[] = [
 ]
 ---
 
-<section class="min-h-screen h-fit relative bg-neutral-900 grid grid-cols-1 lg:grid-cols-3 grid-rows-auto justify-items-center place-items-center gap-5 p-10 pt-40 lg:gap-20 lg:p-20 relative">
-  <h1 id="sectionTitle" class="text-4xl text-white lg:absolute lg:top-32">Development</h1>
+<section class="min-h-screen h-fit relative bg-neutral-900 grid grid-cols-1 lg:grid-cols-3 grid-rows-auto justify-items-center place-items-center gap-5 p-10 pt-40 lg:gap-20 lg:p-20 lg:pt-40 relative">
+  <h1 id="sectionTitle" class="text-4xl lg:text-6xl text-white lg:absolute lg:top-20">Development</h1>
   {projects.map(({name, thumbnail, description}) => {
     return (
       <div data-card class="w-full h-fit flex flex-col justify-between gap-5 bg-neutral-900 text-white p-5 lg:p-10 bg-gradient-to-t from-neutral-800 to-neutral-900">
