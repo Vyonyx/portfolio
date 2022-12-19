@@ -20,4 +20,4 @@ pnpm-debug.log*
 .DS_Store
 
 # template files
-src/components/Card.astro
+src/components/ExampleCard.astro
