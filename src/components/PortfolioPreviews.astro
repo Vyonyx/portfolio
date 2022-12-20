@@ -8,6 +8,8 @@ export interface Project {
   liveLink?: string;
 }
 
+const section = 'portfolio'
+
 const projects: Project[] = [
   {
     name: 'Neighbourly',
@@ -41,37 +43,15 @@ const projects: Project[] = [
 ---
 
 <section class="min-h-screen h-fit relative bg-neutral-900 grid grid-cols-1 lg:grid-cols-3 grid-rows-auto justify-items-center place-items-center gap-5 p-10 pt-40 lg:gap-20 lg:p-20 lg:pt-40 relative">
-  <h1 id="sectionTitle" class="text-4xl lg:text-6xl text-white lg:absolute lg:top-20">Development</h1>
+  <h1 id={`${section}`} class="text-4xl lg:text-6xl text-white lg:absolute lg:top-20">Development</h1>
   {projects.map((project:Project) => {
-    return <Card project={project} />
+    return <Card project={project} section={section} />
   })}
 </section>
 
 <script>
-  import gsap from 'gsap'
-  import { ScrollTrigger } from 'gsap/ScrollTrigger'
-  gsap.registerPlugin(ScrollTrigger)
-  const cards = document.querySelectorAll('[data-card]')
+  import { renderAnimation } from '../utils'
 
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: cards,
-      start: 'top 80%',
-      end: 'top 30%',
-      scrub: 2
-    },
-  })
-
-  tl.from('#sectionTitle', {
-    opacity: 0,
-    duration: 1,
-    y: window.innerWidth < 768 ? -10 : -50,
-    ease: 'sin.easeInOut'
-  })
-  tl.from(cards, {
-    opacity: 0,
-    duration: 1,
-    y: 100,
-    ease: 'sin.easeInOut'
-  }, '<')
+  const section = 'portfolio'
+  renderAnimation(section)
 </script>
