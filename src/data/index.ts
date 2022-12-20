@@ -51,3 +51,9 @@ export const miscProjects: Project[] = [
     githubLink: 'https://github.com/Vyonyx/cv-builder',
   },
 ]
+
+export const architectureProject: Project =  {
+  name: 'Emergent Ecologies',
+  thumbnail: '/swarm-hero.jpg',
+  description: 'My architectural thesis on the use of simulation to study demographic interactions and create a built environment using the visual data.'
+}
