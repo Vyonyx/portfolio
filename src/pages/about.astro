@@ -6,7 +6,7 @@ const linkedInURL = 'https://www.linkedin.com/in/shaneel-kumar-b3812a173/'
 
 <Layout title="SK Details">
   <main
-    class="bg-neutral-900 text-white text-sm md:text-md min-h-screen w-screen p-10 md:pt-40 md:p-20 flex flex-col lg:justify-center lg:align-center"
+    class="bg-neutral-900 text-white text-sm md:text-md min-h-screen w-screen p-10 md:pt-40 md:p-20 grid grid-cols-1 lg:grid-cols-2 gap-20"
   >
     <section class="flex flex-col gap-10 w-fit">
       <h1
@@ -35,5 +35,36 @@ const linkedInURL = 'https://www.linkedin.com/in/shaneel-kumar-b3812a173/'
         development and design.
       </p>
     </section>
+    <div class="hidden lg:flex">
+      <h1 class="text-4xl">About Me Animation</h1>
+      <p>This should contain email, linked in and github links</p>
+    </div>
+
+    <section class="text-white">
+      <h1 class="text-4xl">Education</h1>
+    </section>
+    <div class="hidden lg:flex">
+      <h1 class="text-4xl">Education Animation</h1>
+    </div>
+
+    <section class="text-white">
+      <h1 class="text-4xl">Experience</h1>
+    </section>
+    <div class="hidden lg:flex">
+      <h1 class="text-4xl">Experience</h1>
+    </div>
+
+    <section class="text-white">
+      <h1 class="text-4xl">Technical</h1>
+    </section>
+    <div class="hidden lg:flex">
+      <h1 class="text-4xl">Technical</h1>
+    </div>
+
+    <button
+      class="w-40 h-16 bg-white hover:bg-neutral-900 text-neutral-900 hover:text-white hover:border-2 hover:border-white text-md"
+    >
+      Download CV
+    </button>
   </main>
 </Layout>
