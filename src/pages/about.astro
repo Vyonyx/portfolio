@@ -1,4 +1,5 @@
 ---
+import Education from "../components/Education.astro";
 import Layout from "../layouts/Layout.astro";
 const githubURL = 'https://www.github.com/vyonyx'
 const linkedInURL = 'https://www.linkedin.com/in/shaneel-kumar-b3812a173/'
@@ -8,26 +9,26 @@ const linkedInURL = 'https://www.linkedin.com/in/shaneel-kumar-b3812a173/'
   <main
     class="bg-neutral-900 text-white text-sm md:text-md min-h-screen w-screen p-10 md:pt-40 md:p-20 grid grid-cols-1 lg:grid-cols-2 gap-20"
   >
-    <section class="flex flex-col gap-10 w-fit">
+    <section class="flex flex-col gap-10 w-fit col-span-2 lg:col-span-1">
       <h1
         class="text-4xl">About Me</h1>
-      <p class="max-w-2xl text-left md:text-justify">
+      <p class="max-w-2xl text-left">
         Hello, my name is Shaneel Kumar and I am a Full Stack Web Developer! I have recently
         graduated from Dev Academy Aotearoa and I am excited to get into the industry to make
         a difference.
       </p>
-      <p class="max-w-2xl text-left md:text-justify">
+      <p class="max-w-2xl text-left">
         I am driven by my need to create consistently, whether it's web
         development, or making music, or throwing together a dish with whatever's left in the fridge!
         Creativity and curiosity are core values to me and I am always learning new skills to
         take my work to the next level.
       </p>
-      <p class="max-w-2xl text-left md:text-justify">
+      <p class="max-w-2xl text-left">
         I first learnt to code as a student so that I could create complex geometries and new design 
         tools. I grew this skillset further during my architectural thesis, creating a tool for architects 
         to simulate a demographic and use the mapped data to inform their design.
       </p>
-      <p class="max-w-2xl text-left md:text-justify">
+      <p class="max-w-2xl text-left">
         I've since explored learning Python and web development in my spare time. These explorations led to me
         eventually becoming more interested in web development and that is why I chose to attend a bootcamp to change careers.
         I think web development is an incredibly creative field and I am excited to learn more so that I can 
@@ -40,26 +41,15 @@ const linkedInURL = 'https://www.linkedin.com/in/shaneel-kumar-b3812a173/'
       <p>This should contain email, linked in and github links</p>
     </div>
 
-    <section class="text-white">
-      <h1 class="text-4xl">Education</h1>
-    </section>
-    <div class="hidden lg:flex">
-      <h1 class="text-4xl">Education Animation</h1>
-    </div>
+    <Education />
 
-    <section class="text-white">
+    <section class="text-white col-span-2">
       <h1 class="text-4xl">Experience</h1>
     </section>
-    <div class="hidden lg:flex">
-      <h1 class="text-4xl">Experience</h1>
-    </div>
 
-    <section class="text-white">
+    <section class="text-white col-span-2">
       <h1 class="text-4xl">Technical</h1>
     </section>
-    <div class="hidden lg:flex">
-      <h1 class="text-4xl">Technical</h1>
-    </div>
 
     <button
       class="w-40 h-16 bg-white hover:bg-neutral-900 text-neutral-900 hover:text-white hover:border-2 hover:border-white text-md"
