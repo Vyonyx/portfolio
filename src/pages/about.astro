@@ -3,6 +3,9 @@ import Education from "../components/Education.astro";
 import Experience from "../components/Experience.astro";
 import ListItem from "../components/ListItem.astro";
 import Layout from "../layouts/Layout.astro";
+
+import { technical } from "../data";
+
 const githubURL = 'https://www.github.com/vyonyx'
 const linkedInURL = 'https://www.linkedin.com/in/shaneel-kumar-b3812a173/'
 ---
@@ -48,12 +51,22 @@ const linkedInURL = 'https://www.linkedin.com/in/shaneel-kumar-b3812a173/'
 
     <section class="text-white col-span-2">
       <h1 class="text-4xl mb-6">Technical</h1>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+        {technical.map(({ skill, description }) => {
+          return (
+            <li class="grid auto-cols-auto gap-2">
+              <span class="text-xl pt-2 border-t-2 border-white">{skill}</span>
+              <span class="max-w-xs text-sm">{description}</span>
+            </li>
+          )
+        })}
+      </ul>
     </section>
 
-    <button
+    <!-- <button
       class="w-40 h-16 bg-white hover:bg-neutral-900 text-neutral-900 hover:text-white hover:border-2 hover:border-white text-md"
     >
       Download CV
-    </button>
+    </button> -->
   </main>
 </Layout>

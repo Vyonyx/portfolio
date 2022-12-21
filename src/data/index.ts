@@ -85,3 +85,47 @@ export const experience: Experience[] = [
     description: `I was responsible for project managing a team of 3 junior developers while they learned the workflow/process and also provided mentorship and upskilling sessions on an individual basis. This was my first role in a leadership position where I found a natural ability to coordinate a team towards an outcome and how to work with different types of people. This position was also a 2nd promotion from starting as a junior, to intermediate, and then finally team lead. I was told that my quick progression over the year was due to my technical proficiency and the delivery of high quality work in an efficient manner.`
   },
 ]
+
+export interface Technical {
+  skill: string;
+  description: string;
+}
+
+export const technical: Technical[] = [
+  {
+    skill: 'Javascript',
+    description: `Used to create 30+ projects. From games, to web sites and apps using vanilla DOM manipulation`
+  },
+  {
+    skill: 'Typescript',
+    description: `Used to build more resilient web apps and improve my developer experience`
+  },
+  {
+    skill: 'React.js',
+    description: `Used to create 10+ projects with dynamic user interactions. Also used Next.js (React/meta framework)`
+  },
+  {
+    skill: 'Redux',
+    description: `Used to managed frontend states and dynamically show loading states of async data`
+  },
+  {
+    skill: 'Git',
+    description: `Used to version control, from early frontend JS projects to learning full stack development`
+  },
+  {
+    skill: 'SQLite3',
+    description: `Used as primary database on full stack projects. Familiar with table joins, queries and CRUD operations`
+  },
+  {
+    skill: 'MongoDB',
+    description: `Used as primary database on personal full stack projects. Familiar with queries and CRUD operations`
+  },
+  {
+    skill: 'Express',
+    description: `Used to build backends for full stack projects (APIs and communication with databases)`
+  },
+  {
+    skill: 'Figma/Adobe Suite',
+    description: `Used to wireframe designs and create custom assets`
+  },
+]
