@@ -64,7 +64,8 @@
 
   tl.set('.letter', { opacity: 0, y: 30 })
   tl.set(arrowElement, { opacity:0, y:100 })
-  tl.from(nameElement, { opacity: 0, duration: 1, delay: headingAnimationDelay, ease: 'sine.inOut' })
+  tl.set(nameElement, { opacity:0 })
+  tl.to(nameElement, { opacity: 1, duration: 1, delay: headingAnimationDelay, ease: 'sine.inOut' })
   tl.to('.letter', { y:0, opacity: 1, stagger:0.075, ease:'easeOut' })
   tl.to(coverElement, { opacity: 0.5, duration: 0.5, ease: 'sine.inOut' }, '<0.5')
   tl.to(arrowElement, { opacity:1, y:0, duration:1, ease: 'power2' }, 2)
