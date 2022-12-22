@@ -28,3 +28,18 @@ export function renderAnimation(section:string) {
     ease: 'sin.easeInOut'
   }, '<')
 }
+
+export function basicRevealAnimation(section:Element, delay:number) {
+  const tl = gsap.timeline({
+    defaults: {
+      ease: 'sin.easeInOut'
+    },
+  })
+
+  tl.from(section, {
+    opacity: 0,
+    y: 100,
+    duration: 2,
+    delay: delay
+  })
+}

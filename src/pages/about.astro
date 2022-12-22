@@ -1,20 +1,27 @@
 ---
 import Education from "../components/Education.astro";
 import Experience from "../components/Experience.astro";
-import ListItem from "../components/ListItem.astro";
 import Layout from "../layouts/Layout.astro";
 
 import { technical } from "../data";
 
 const githubURL = 'https://www.github.com/vyonyx'
 const linkedInURL = 'https://www.linkedin.com/in/shaneel-kumar-b3812a173/'
+const aboutMeSection = 'aboutMeSection'
+const experienceSection = 'experienceSection'
+const educationSection = 'educationSection'
+const technicalSection = 'technicalSection'
+const contactSection = 'contactSection'
 ---
 
 <Layout title="SK Details">
   <main
     class="bg-neutral-900 text-white text-sm md:text-md min-h-screen w-screen p-10 md:pt-40 md:p-20 grid grid-cols-1 lg:grid-cols-2 gap-20"
   >
-    <section class="flex flex-col gap-10 w-fit col-span-2 lg:col-span-1">
+    <section
+      id={aboutMeSection}
+      class="flex flex-col gap-10 w-fit col-span-2 lg:col-span-1"
+    >
       <h1
         class="text-4xl">About Me</h1>
       <p class="max-w-2xl text-left">
@@ -41,15 +48,18 @@ const linkedInURL = 'https://www.linkedin.com/in/shaneel-kumar-b3812a173/'
         development and design.
       </p>
     </section>
-    <div class="hidden lg:flex">
+    <!-- <div class="hidden lg:flex">
       <h1 class="text-4xl">About Me Animation</h1>
       <p>This should contain email, linked in and github links</p>
-    </div>
+    </div> -->
 
-    <Experience />
-    <Education />
+    <Experience sectionID={experienceSection} />
+    <Education sectionID={educationSection} />
 
-    <section class="text-white col-span-2">
+    <section
+      id={technicalSection}
+      class="text-white col-span-2"
+    >
       <h1 class="text-4xl mb-6">Technical</h1>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
         {technical.map(({ skill, description }) => {
@@ -63,7 +73,10 @@ const linkedInURL = 'https://www.linkedin.com/in/shaneel-kumar-b3812a173/'
       </ul>
     </section>
 
-    <section class="text-white col-span-2 max-w-lg text-lg">
+    <section
+      id={contactSection}
+      class="text-white col-span-2 max-w-lg text-lg"
+    >
       <h1 class="text-4xl mb-6">Contact Me</h1>
       <form
         class="grid auto-rows-auto gap-2"
@@ -91,4 +104,19 @@ const linkedInURL = 'https://www.linkedin.com/in/shaneel-kumar-b3812a173/'
       Download CV
     </button> -->
   </main>
+
+  <script>
+    import { basicRevealAnimation } from '../utils'
+    const aboutMeSection = document.getElementById('aboutMeSection')
+    const experienceSection = document.getElementById('experienceSection')
+    const educationSection = document.getElementById('educationSection')
+    const technicalSection = document.getElementById('technicalSection')
+    const contactSection = document.getElementById('contactSection')
+
+    aboutMeSection && basicRevealAnimation(aboutMeSection, 0)
+    experienceSection && basicRevealAnimation(experienceSection, 1)
+    educationSection && basicRevealAnimation(educationSection, 2)
+    technicalSection && basicRevealAnimation(technicalSection, 3)
+    contactSection && basicRevealAnimation(contactSection, 4)
+  </script>
 </Layout>

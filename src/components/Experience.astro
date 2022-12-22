@@ -1,8 +1,12 @@
 ---
 import { experience } from "../data";
 import ListItem from "./ListItem.astro";
+const { sectionID } = Astro.props
 ---
-<section class="text-white col-span-2">
+<section
+  id={sectionID}
+  class="text-white col-span-2"
+>
   <h1 class="text-4xl mb-6">Experience</h1>
   <ul class="w-full text-md lg:text-lg">
     {experience.map(({title, company, year, description}) => {
