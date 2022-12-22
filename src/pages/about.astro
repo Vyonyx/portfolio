@@ -106,17 +106,17 @@ const contactSection = 'contactSection'
   </main>
 
   <script>
-    import { basicRevealAnimation } from '../utils'
+    import { basicRevealAnimation, scrollRevealAnimation } from '../utils'
     const aboutMeSection = document.getElementById('aboutMeSection')
     const experienceSection = document.getElementById('experienceSection')
     const educationSection = document.getElementById('educationSection')
     const technicalSection = document.getElementById('technicalSection')
     const contactSection = document.getElementById('contactSection')
 
-    aboutMeSection && basicRevealAnimation(aboutMeSection, 0)
-    experienceSection && basicRevealAnimation(experienceSection, 1)
-    educationSection && basicRevealAnimation(educationSection, 2)
-    technicalSection && basicRevealAnimation(technicalSection, 3)
-    contactSection && basicRevealAnimation(contactSection, 4)
+    aboutMeSection && basicRevealAnimation(aboutMeSection)
+    experienceSection && scrollRevealAnimation(experienceSection)()
+    educationSection && scrollRevealAnimation(educationSection)()
+    technicalSection && scrollRevealAnimation(technicalSection)()
+    contactSection && scrollRevealAnimation(contactSection)(75)
   </script>
 </Layout>

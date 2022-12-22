@@ -29,7 +29,7 @@ export function renderAnimation(section:string) {
   }, '<')
 }
 
-export function basicRevealAnimation(section:Element, delay:number) {
+export function basicRevealAnimation(section:Element) {
   const tl = gsap.timeline({
     defaults: {
       ease: 'sin.easeInOut'
@@ -40,6 +40,26 @@ export function basicRevealAnimation(section:Element, delay:number) {
     opacity: 0,
     y: 100,
     duration: 2,
-    delay: delay
   })
+}
+
+export function scrollRevealAnimation(section:Element) {
+  return (scrollerEnd:number = 30, scrollerStart:number = 80) => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: `top ${scrollerStart}%`,
+        end: `top ${scrollerEnd}%`,
+        scrub: 2,
+      },
+      defaults: {
+        ease: 'sin.easeInOut'
+      },
+    })
+  
+    tl.from(section, {
+      opacity: 0,
+      y: 100,
+    })
+  }
 }
