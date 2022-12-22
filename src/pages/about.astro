@@ -55,12 +55,34 @@ const linkedInURL = 'https://www.linkedin.com/in/shaneel-kumar-b3812a173/'
         {technical.map(({ skill, description }) => {
           return (
             <li class="grid auto-cols-auto gap-2">
-              <span class="text-xl pt-2 border-t-2 border-white">{skill}</span>
+              <span class="text-xl pt-4 border-t-2 border-white">{skill}</span>
               <span class="max-w-xs text-sm">{description}</span>
             </li>
           )
         })}
       </ul>
+    </section>
+
+    <section class="text-white col-span-2 max-w-lg text-lg">
+      <h1 class="text-4xl mb-6">Contact Me</h1>
+      <form
+        class="grid auto-rows-auto gap-2"
+        action="mailto:shaneel_kumar@live.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <label for="message" class="text-sm">Send me an email:</label>
+        <textarea
+          class="text-black w-full max-w-lg h-40 resize-none p-6"
+          name="message"
+          id="message" />
+        <button
+          class="place-self-end mt-4 mr-4 border-2 border-white hover:border-neutral-900 hover:bg-white hover:text-neutral-900 p-2"
+          type="submit"
+        >
+          Submit
+      </button>
+      </form>
     </section>
 
     <!-- <button
