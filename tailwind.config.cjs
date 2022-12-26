@@ -7,6 +7,7 @@ module.exports = {
       fontFamily: {
         bodoni: ['Bodoni Moda', 'serif'],
         roboto: ['Roboto', 'san-serif'],
+        garramond: ['EB Garamond', 'serif'],
       },
     },
   },
