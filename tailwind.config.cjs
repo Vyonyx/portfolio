@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         bodoni: ['Bodoni Moda', 'serif'],
+        roboto: ['Roboto', 'san-serif'],
       },
     },
   },
