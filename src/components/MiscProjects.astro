@@ -3,7 +3,7 @@ import Card from "./Card.astro";
 import { miscProjects } from "../data"
 const section = 'misc-projects'
 ---
-<section class="h-fit relative bg-neutral-900 grid grid-cols-1 lg:grid-cols-3 grid-rows-auto justify-items-center place-items-center gap-6 p-10 pt-40 lg:p-20 lg:pt-40 relative">
+<section class="h-fit relative bg-neutral-900 grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-auto justify-items-center place-items-center gap-6 p-10 pt-40 lg:p-20 lg:pt-40 relative">
   <h1 id={`${section}`} class="text-4xl lg:text-6xl text-white lg:absolute lg:top-20">Misc. Projects</h1>
   {miscProjects.map((project) => {
     return <Card project={project} section={section} />
