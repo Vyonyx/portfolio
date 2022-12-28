@@ -9,10 +9,10 @@ export interface Project {
 export const projects: Project[] = [
   {
     name: 'Neighbourly',
-    thumbnail: 'https://images.unsplash.com/photo-1519222970733-f546218fa6d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    thumbnail: '/project_previews/neighbourly.png',
     description: 'Marketplace for neighbours to barter and give away food, building stronger relationships with those around you.',
     githubLink: 'https://github.com/Vyonyx/neighbourly',
-    liveLink: 'https://github.com/Vyonyx/neighbourly',
+    liveLink: 'https://neighbourly.vercel.app/',
   },
   {
     name: 'At What Cost',
