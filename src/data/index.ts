@@ -28,27 +28,26 @@ export const projects: Project[] = [
 export const miscProjects: Project[] = [
   {
     name: "CV Builder",
-    thumbnail:
-      "https://images.unsplash.com/photo-1519222970733-f546218fa6d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    thumbnail: "/project_previews/cv-builder.png",
     description:
-      "Marketplace for neighbours to barter and give away food, building stronger relationships with those around you.",
-    githubLink: "https://github.com/Vyonyx/cv-builder",
+      "My first React project. This frontend app allows users to quickly build a CV and save the result to as a PDF.",
+    githubLink: "https://github.com/Vyonyx/cv-maker",
   },
   {
-    name: "Minesweeper",
-    thumbnail:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    name: "Analog Clock",
+    thumbnail: "/project_previews/clock.png",
     description:
-      "Budget tracking app used to understand what you're spending money on so you can make informed decisions about your finances.",
-    githubLink: "https://github.com/Vyonyx/neighbourly",
+      "An experiment using destructured assets to create a realistic analog clock using HTML, CSS (shadows) & Javascript.",
+    githubLink: "https://github.com/shaneel-kumar/clock",
+    liveLink: "https://shaneel-kumar.github.io/clock/",
   },
   {
-    name: "CV Builder",
-    thumbnail:
-      "https://images.unsplash.com/photo-1519222970733-f546218fa6d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    name: "BugSweeper",
+    thumbnail: "/project_previews/minesweeper.png",
     description:
-      "Marketplace for neighbours to barter and give away food, building stronger relationships with those around you.",
-    githubLink: "https://github.com/Vyonyx/cv-builder",
+      "The classic game of Minesweeper, with a developer's twist. This project uses a recursive algorithm to check mines and calculate tile numbers.",
+    githubLink: "https://github.com/shaneel-kumar/minesweeper",
+    liveLink: "https://shaneel-kumar.github.io/minesweeper/",
   },
 ];
 
