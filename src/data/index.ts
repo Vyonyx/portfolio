@@ -30,7 +30,7 @@ export const miscProjects: Project[] = [
     name: "CV Builder",
     thumbnail: "/project_previews/cv-builder.png",
     description:
-      "My first React project. This frontend app allows users to quickly build a CV and save the result to as a PDF.",
+      "My first React project. This frontend app allows users to quickly build a CV and save the result as a PDF.",
     githubLink: "https://github.com/Vyonyx/cv-maker",
   },
   {
