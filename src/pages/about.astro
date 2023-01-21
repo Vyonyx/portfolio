@@ -5,13 +5,13 @@ import Layout from "../layouts/Layout.astro";
 
 import { technical } from "../data";
 
-const githubURL = 'https://www.github.com/vyonyx'
-const linkedInURL = 'https://www.linkedin.com/in/shaneel-kumar-b3812a173/'
-const aboutMeSection = 'aboutMeSection'
-const experienceSection = 'experienceSection'
-const educationSection = 'educationSection'
-const technicalSection = 'technicalSection'
-const contactSection = 'contactSection'
+const githubURL = "https://www.github.com/vyonyx";
+const linkedInURL = "https://www.linkedin.com/in/shaneel-kumar-b3812a173/";
+const aboutMeSection = "aboutMeSection";
+const experienceSection = "experienceSection";
+const educationSection = "educationSection";
+const technicalSection = "technicalSection";
+const contactSection = "contactSection";
 ---
 
 <Layout title="SK Details">
@@ -20,32 +20,35 @@ const contactSection = 'contactSection'
   >
     <section
       id={aboutMeSection}
-      class="flex flex-col gap-10 w-fit col-span-2 lg:col-span-1"
+      class="flex flex-col gap-10 w-fit col-span-2 lg:col-span-1 opacity-0"
     >
-      <h1
-        class="text-4xl">About Me</h1>
+      <h1 class="text-4xl">About Me</h1>
       <p class="max-w-2xl text-left">
-        Hello, my name is Shaneel Kumar and I am a Full Stack Web Developer! I have recently
-        graduated from Dev Academy Aotearoa and I am excited to get into the industry to make
-        a difference.
+        Hello, my name is Shaneel Kumar and I am a Full Stack Web Developer! I
+        have recently graduated from Dev Academy Aotearoa and I am excited to
+        get into the industry to make a difference.
       </p>
       <p class="max-w-2xl text-left">
         I am driven by my need to create consistently, whether it's web
-        development, or making music, or throwing together a dish with whatever's left in the fridge!
-        Creativity and curiosity are core values to me and I am always learning new skills to
-        take my work to the next level.
+        development, or making music, or throwing together a dish with
+        whatever's left in the fridge! Creativity and curiosity are core values
+        to me and I am always learning new skills to take my work to the next
+        level.
       </p>
       <p class="max-w-2xl text-left">
-        I first learnt to code as a student so that I could create complex geometries and new design 
-        tools. I grew this skillset further during my architectural thesis, creating a tool for architects 
-        to simulate a demographic and use the mapped data to inform their design.
+        I first learnt to code as a student so that I could create complex
+        geometries and new design tools. I grew this skillset further during my
+        architectural thesis, creating a tool for architects to simulate a
+        demographic and use the mapped data to inform their design.
       </p>
       <p class="max-w-2xl text-left">
-        I've since explored learning Python and web development in my spare time. These explorations led to me
-        eventually becoming more interested in web development and that is why I chose to attend a bootcamp to change careers.
-        I think web development is an incredibly creative field and I am excited to learn more so that I can 
-        build the things that I've always wanted to and to create experiences that intersect between cutting edge 
-        development and design.
+        I've since explored learning Python and web development in my spare
+        time. These explorations led to me eventually becoming more interested
+        in web development and that is why I chose to attend a bootcamp to
+        change careers. I think web development is an incredibly creative field
+        and I am excited to learn more so that I can build the things that I've
+        always wanted to and to create experiences that intersect between
+        cutting edge development and design.
       </p>
     </section>
     <!-- <div class="hidden lg:flex">
@@ -56,27 +59,25 @@ const contactSection = 'contactSection'
     <Experience sectionID={experienceSection} />
     <Education sectionID={educationSection} />
 
-    <section
-      id={technicalSection}
-      class="text-white col-span-2"
-    >
+    <section id={technicalSection} class="text-white col-span-2">
       <h1 class="text-4xl mb-6">Technical</h1>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
-        {technical.map(({ skill, description }) => {
-          return (
-            <li class="grid auto-cols-auto gap-2">
-              <span class="text-xl pt-4 border-t-2 border-white">{skill}</span>
-              <span class="max-w-xs text-sm">{description}</span>
-            </li>
-          )
-        })}
+        {
+          technical.map(({ skill, description }) => {
+            return (
+              <li class="grid auto-cols-auto gap-2">
+                <span class="text-xl pt-4 border-t-2 border-white">
+                  {skill}
+                </span>
+                <span class="max-w-xs text-sm">{description}</span>
+              </li>
+            );
+          })
+        }
       </ul>
     </section>
 
-    <section
-      id={contactSection}
-      class="text-white col-span-2 max-w-lg text-lg"
-    >
+    <section id={contactSection} class="text-white col-span-2 max-w-lg text-lg">
       <h1 class="text-4xl mb-6">Contact Me</h1>
       <form
         class="grid auto-rows-auto gap-2"
@@ -88,13 +89,13 @@ const contactSection = 'contactSection'
         <textarea
           class="text-black w-full max-w-lg h-40 resize-none p-6"
           name="message"
-          id="message" />
+          id="message"></textarea>
         <button
           class="place-self-end mt-4 mr-4 border-2 border-white hover:border-neutral-900 hover:bg-white hover:text-neutral-900 p-2"
           type="submit"
         >
           Submit
-      </button>
+        </button>
       </form>
     </section>
 
@@ -106,17 +107,17 @@ const contactSection = 'contactSection'
   </main>
 
   <script>
-    import { basicRevealAnimation, scrollRevealAnimation } from '../utils'
-    const aboutMeSection = document.getElementById('aboutMeSection')
-    const experienceSection = document.getElementById('experienceSection')
-    const educationSection = document.getElementById('educationSection')
-    const technicalSection = document.getElementById('technicalSection')
-    const contactSection = document.getElementById('contactSection')
+    import { basicRevealAnimation, scrollRevealAnimation } from "../utils";
+    const aboutMeSection = document.getElementById("aboutMeSection");
+    const experienceSection = document.getElementById("experienceSection");
+    const educationSection = document.getElementById("educationSection");
+    const technicalSection = document.getElementById("technicalSection");
+    const contactSection = document.getElementById("contactSection");
 
-    aboutMeSection && basicRevealAnimation(aboutMeSection)
-    experienceSection && scrollRevealAnimation(experienceSection)()
-    educationSection && scrollRevealAnimation(educationSection)()
-    technicalSection && scrollRevealAnimation(technicalSection)()
-    contactSection && scrollRevealAnimation(contactSection)(75)
+    aboutMeSection && basicRevealAnimation(aboutMeSection);
+    experienceSection && scrollRevealAnimation(experienceSection)();
+    educationSection && scrollRevealAnimation(educationSection)();
+    technicalSection && scrollRevealAnimation(technicalSection)();
+    contactSection && scrollRevealAnimation(contactSection)(75);
   </script>
 </Layout>
