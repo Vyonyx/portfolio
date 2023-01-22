@@ -4,6 +4,7 @@ import Experience from "../components/Experience.astro";
 import Layout from "../layouts/Layout.astro";
 
 import { technical } from "../data";
+import * as THREE from "three";
 
 const githubURL = "https://www.github.com/vyonyx";
 const linkedInURL = "https://www.linkedin.com/in/shaneel-kumar-b3812a173/";
@@ -16,7 +17,7 @@ const contactSection = "contactSection";
 
 <Layout title="SK Details">
   <main
-    class="bg-neutral-900 text-white text-sm md:text-md min-h-screen w-screen p-10 md:pt-40 md:p-20 grid grid-cols-1 lg:grid-cols-2 gap-20"
+    class="bg-neutral-900 text-white text-sm md:text-md p-10 md:pt-40 md:p-20 grid grid-cols-1 lg:grid-cols-2 gap-20"
   >
     <section
       id={aboutMeSection}
@@ -51,10 +52,12 @@ const contactSection = "contactSection";
         cutting edge development and design.
       </p>
     </section>
-    <!-- <div class="hidden lg:flex">
-      <h1 class="text-4xl">About Me Animation</h1>
-      <p>This should contain email, linked in and github links</p>
-    </div> -->
+    <div
+      id="canvas-container"
+      class="hidden lg:flex lg:justify-center xl:justify-start"
+    >
+      <canvas id="aboutme-3d" class=""></canvas>
+    </div>
 
     <Experience sectionID={experienceSection} />
     <Education sectionID={educationSection} />
@@ -119,5 +122,59 @@ const contactSection = "contactSection";
     educationSection && scrollRevealAnimation(educationSection)();
     technicalSection && scrollRevealAnimation(technicalSection)();
     contactSection && scrollRevealAnimation(contactSection)(75);
+
+    // ThreeJS
+    import * as THREE from "three";
+    const container = document.getElementById(
+      "canvas-container"
+    ) as HTMLDivElement;
+    const canvas = document.getElementById("aboutme-3d") as HTMLCanvasElement;
+    const scene = new THREE.Scene();
+
+    const sizes = {
+      width: container.clientWidth,
+      height: container.clientHeight,
+    };
+
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      sizes.width / sizes.height,
+      0.1,
+      100
+    );
+    camera.position.z = 2;
+
+    const material = new THREE.MeshBasicMaterial({
+      color: 0xff0000,
+      wireframe: true,
+    });
+
+    const geometry = new THREE.SphereGeometry(1, 16, 16);
+    const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+    renderer.setSize(sizes.width, sizes.height);
+
+    // Animate
+    const clock = new THREE.Clock();
+
+    const tick = () => {
+      const elapsedTime = clock.getElapsedTime();
+
+      // Update meshes
+      mesh.rotation.y = Math.PI * elapsedTime * 0.1;
+
+      // Update controls
+      // controls.update()
+
+      // Render
+      renderer.render(scene, camera);
+
+      // Call tick again on the next frame
+      window.requestAnimationFrame(tick);
+    };
+
+    tick();
   </script>
 </Layout>
