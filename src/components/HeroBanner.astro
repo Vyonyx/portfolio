@@ -1,85 +1,128 @@
 ---
-
 ---
 
-<section class="relative h-screen flex flex-col font-serif items-center justify-center text-center bg-neutral-900 bg-cover bg-center bg-[url(/swarm-hero.jpg)]">
-  <div id="bg-cover" class="absolute w-full h-full top-0 left-0 bg-neutral-900 z-0"></div>
-  <h1 id="myName" class="font-roboto text-4xl lg:text-8xl text-white z-10 opacity-0">Shaneel Kumar</h1>
-  <span id="currentTitle" class="font-bodoni text-xl lg:text-5xl text-white z-10 relative flex"></span>
-  <div id='scrollPrompt' class="z-10 absolute bottom-10 flex flex-col items-center">
-    <span id="scrollMessage" class="text-sm text-white z-10 relative flex"></span>
+<section
+  class="relative h-screen flex flex-col font-serif items-center justify-center text-center bg-neutral-900 bg-cover bg-center bg-[url(/swarm-hero.jpg)]"
+>
+  <div
+    id="bg-cover"
+    class="absolute w-full h-full top-0 left-0 bg-neutral-900 z-0"
+  >
+  </div>
+  <h1
+    id="myName"
+    class="font-roboto text-4xl lg:text-8xl text-white z-10 opacity-0"
+  >
+    Shaneel Kumar
+  </h1>
+  <span
+    id="currentTitle"
+    class="font-bodoni text-xl lg:text-5xl text-white z-10 relative flex"
+  ></span>
+  <div
+    id="scrollPrompt"
+    class="z-10 absolute bottom-10 flex flex-col items-center"
+  >
+    <span id="scrollMessage" class="text-sm text-white z-10 relative flex"
+    ></span>
     <svg
       id="arrow"
-      class="cursor-pointer"
+      class="cursor-pointer opacity-0"
       xmlns="http://www.w3.org/2000/svg"
-      width="50" height="50"
-      fill='#ffffff'
-      viewBox="0 0 24 24">
-        <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
+      width="50"
+      height="50"
+      fill="#ffffff"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
+      ></path>
     </svg>
   </div>
 </section>
 
 <script>
-  import gsap from 'gsap'
-  import { ScrollTrigger } from 'gsap/ScrollTrigger'
-  gsap.registerPlugin(ScrollTrigger)
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
 
-  const tl = gsap.timeline({ ease: 'power2' })
+  const tl = gsap.timeline({ ease: "power2" });
 
-  const titles = ['Portfolio', 'Full Stack Developer', 'Designer']
-  const currentTitle = titles[0]
+  const titles = ["Portfolio", "Full Stack Developer", "Designer"];
+  const currentTitle = titles[0];
 
-  const headingAnimationDelay = 0.75
-  
-  const nameElement = document.getElementById('myName') as HTMLHeadElement
-  const titleElement = document.getElementById('currentTitle') as HTMLSpanElement
-  const coverElement = document.getElementById('bg-cover') as HTMLDivElement
-  const arrowElement = document.getElementById('arrow') as HTMLOrSVGElement
-  const scrollMessage = document.getElementById('scrollMessage') as HTMLSpanElement
+  const headingAnimationDelay = 0.75;
+
+  const nameElement = document.getElementById("myName") as HTMLHeadElement;
+  const titleElement = document.getElementById(
+    "currentTitle"
+  ) as HTMLSpanElement;
+  const coverElement = document.getElementById("bg-cover") as HTMLDivElement;
+  const arrowElement = document.getElementById("arrow") as HTMLOrSVGElement;
+  const scrollMessage = document.getElementById(
+    "scrollMessage"
+  ) as HTMLSpanElement;
 
   function removeHeadingLetters(heading: HTMLSpanElement) {
     while (heading.firstChild) {
-        heading.removeChild(heading.firstChild)
-      }
+      heading.removeChild(heading.firstChild);
+    }
   }
 
-  function appendLettersToHeading(letters:string, heading:HTMLSpanElement) {
-    letters.split('').map(letter => {
-
-      const newLetter = document.createElement('span')
-      newLetter.innerText = letter
-      newLetter.classList.add('letter')
-      heading.appendChild(newLetter)
-    })
+  function appendLettersToHeading(letters: string, heading: HTMLSpanElement) {
+    letters.split("").map((letter) => {
+      const newLetter = document.createElement("span");
+      newLetter.innerText = letter;
+      newLetter.classList.add("letter");
+      heading.appendChild(newLetter);
+    });
   }
 
   function appendTitleToHeading() {
-    removeHeadingLetters(titleElement)
-    appendLettersToHeading(currentTitle, titleElement)
+    removeHeadingLetters(titleElement);
+    appendLettersToHeading(currentTitle, titleElement);
   }
 
-  appendTitleToHeading()
-  appendLettersToHeading('scroll', scrollMessage)
+  appendTitleToHeading();
+  appendLettersToHeading("scroll", scrollMessage);
 
-  tl.to(nameElement, { opacity: 1, duration: 1, delay: headingAnimationDelay, ease: 'sine.inOut' })
-  tl.from('.letter', { y: 30, opacity: 0, stagger:0.075, ease:'easeOut' })
-  tl.to(coverElement, { opacity: 0.5, duration: 0.5, ease: 'sine.inOut' }, '<0.5')
-  tl.from(arrowElement, { opacity:0, y:100, duration:1, ease: 'power2' }, 2)
-  tl.to(arrowElement, { y:5, duration:0.5, repeat: -1, yoyo:true, ease:'linear' })
+  tl.to(nameElement, {
+    opacity: 1,
+    duration: 1,
+    delay: headingAnimationDelay,
+    ease: "sine.inOut",
+  });
+  tl.from(".letter", { y: 30, opacity: 0, stagger: 0.075, ease: "easeOut" });
+  tl.to(
+    coverElement,
+    { opacity: 0.5, duration: 0.5, ease: "sine.inOut" },
+    "<0.5"
+  );
+  tl.fromTo(
+    arrowElement,
+    { opacity: 0, y: 100 },
+    { opacity: 1, y: 0, duration: 1, ease: "power2" },
+    2
+  );
+  tl.to(arrowElement, {
+    y: 5,
+    duration: 0.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "linear",
+  });
 
   const hideTL = gsap.timeline({
     scrollTrigger: {
       trigger: coverElement,
-      start: 'bottom 95%',
-      end: 'bottom 90%',
+      start: "bottom 95%",
+      end: "bottom 90%",
       scrub: 2,
     },
-  })
+  });
 
   hideTL.to(coverElement, {
     opacity: 1,
-    ease: 'power4'
-  })
-
+    ease: "power4",
+  });
 </script>

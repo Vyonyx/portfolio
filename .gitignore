@@ -21,3 +21,4 @@ pnpm-debug.log*
 
 # template files
 src/components/ExampleCard.astro
+.vercel
