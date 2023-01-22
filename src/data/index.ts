@@ -42,12 +42,12 @@ export const miscProjects: Project[] = [
     liveLink: "https://shaneel-kumar.github.io/clock/",
   },
   {
-    name: "BugSweeper",
-    thumbnail: "/project_previews/minesweeper.png",
+    name: "Weather App",
+    thumbnail: "/project_previews/weather.png",
     description:
-      "The classic game of Minesweeper, with a developer's twist. This project uses a recursive algorithm to check mines and calculate tile numbers.",
-    githubLink: "https://github.com/shaneel-kumar/minesweeper",
-    liveLink: "https://shaneel-kumar.github.io/minesweeper/",
+      "Simple frontend project that consumes a weather API. Made with vanilla JS and handpicked assets.",
+    githubLink: "https://github.com/Vyonyx/weather-app",
+    liveLink: "https://vyonyx.github.io/weather-app/",
   },
 ];
 
