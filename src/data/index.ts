@@ -30,14 +30,14 @@ export const miscProjects: Project[] = [
     name: "CV Builder",
     thumbnail: "/project_previews/cv-builder.png",
     description:
-      "My first React project. This frontend app allows users to quickly build a CV and save the result as a PDF.",
+      "My first React project. This frontend app allows users to quickly build a CV and save the output as a PDF.",
     githubLink: "https://github.com/Vyonyx/cv-maker",
   },
   {
     name: "Analog Clock",
     thumbnail: "/project_previews/clock.png",
     description:
-      "An experiment using destructured assets to create a realistic analog clock using HTML, CSS (shadows) & Javascript.",
+      "An experimental frontend project using destructured assets to create a realistic analog clock.",
     githubLink: "https://github.com/shaneel-kumar/clock",
     liveLink: "https://shaneel-kumar.github.io/clock/",
   },
