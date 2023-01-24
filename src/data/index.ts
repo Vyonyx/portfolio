@@ -11,7 +11,7 @@ export const projects: Project[] = [
     name: "Neighbourly",
     thumbnail: "/project_previews/neighbourly.png",
     description:
-      "Marketplace for users to barter and give away food to their neighbours, building stronger relationships with those around them. This full stack web app features a marketplace and inventory management of user listings. There is also a instant messaging feature that users can use to contact one another before exchanging sensitive information.",
+      "A web app that allows users to trade or give away essentials to their neighbours. The app aims to create new relationships between neighbours, leading to stronger communities. Users can upload and manage their listings, browse a marketplace to find items and communicate with other users through an instant messaging feature. The minimum viable product focuses on the trade of food and ingredients, but future updates will endeavour to create a general marketplace where neighbours can list anything to help their community (i.e school uniforms, baby clothes, services).",
     githubLink: "https://github.com/Vyonyx/neighbourly",
     liveLink: "https://neighbourly.vercel.app/",
   },
@@ -19,7 +19,7 @@ export const projects: Project[] = [
     name: "At What Cost",
     thumbnail: "/project_previews/AWC-Preview.png",
     description:
-      "A cost analysis tool to help users understand and make informed decisions about their finances. Users can upload a copy of their bank statement in .CSV format to get started. This full stack web app processes and displays their transaction history in a modern UI where they can add filters to categorise their spending. The app processes the filters to display a cost breakdown that users can use to process what they spent money on and make decisions to adjust their spending if required.",
+      "A full-stack web app that helps users break down their monthly spending habits. Users can upload a bank statement in .CSV format to display a list of transactions to that they can apply filters. The app processes the user's filters and displays a cost breakdown that gives instant feedback about where a user's money is going.",
     githubLink: "https://github.com/Vyonyx/at-what-cost-FE",
     liveLink: "https://at-what-cost-fe.vercel.app/",
   },
@@ -37,7 +37,7 @@ export const miscProjects: Project[] = [
     name: "Analog Clock",
     thumbnail: "/project_previews/clock.png",
     description:
-      "An experimental frontend project using destructured assets to create a realistic analog clock.",
+      "An experimental frontend project using destructured assets to create a realistic analogue clock.",
     githubLink: "https://github.com/shaneel-kumar/clock",
     liveLink: "https://shaneel-kumar.github.io/clock/",
   },
@@ -45,7 +45,7 @@ export const miscProjects: Project[] = [
     name: "Weather App",
     thumbnail: "/project_previews/weather.png",
     description:
-      "Simple frontend project that consumes a weather API. Made with vanilla JS and handpicked assets.",
+      "A simple frontend project that consumes a weather API. Made with vanilla Javascript and handpicked assets.",
     githubLink: "https://github.com/Vyonyx/weather-app",
     liveLink: "https://vyonyx.github.io/weather-app/",
   },
@@ -55,7 +55,7 @@ export const architectureProject: Project = {
   name: "Emergent Ecologies",
   thumbnail: "/swarm-hero.jpg",
   description:
-    "My architectural thesis on the use of simulation to study demographic interactions and create a built environment using the visual data.",
+    "My architectural thesis explores simulating a demographic and mapping their interactions to create visual feedback that architects can use to inform their design.",
 };
 
 export interface Experience {
@@ -70,19 +70,19 @@ export const experience: Experience[] = [
     title: "Full Stack Web Developer",
     company: "Dev Academy Aotearoa",
     year: "Aug - Dec 2022",
-    description: `Graduated from an intense 15 week web development bootcamp that mimics what it’s like to work in development teams. The programme heavily focused on learning a modern web dev stack and how we can work in teams to deliver products through the agile methodology. There was also emphasis on learning soft skills that help us navigate working in a variety of teams.`,
+    description: `Graduated from an intense 15 week bootcamp that taught modern web development and what it is like to work in teams. We learnt various frontend and backend technologies and how to work in an agile setting. There was also an emphasis on learning soft skills to help improve the people side of tech and how to work with various personalities.`,
   },
   {
     title: "Architectural Graduate (Intermediate)",
     company: "Prime Designs",
     year: "Sep 2020 - Aug 2022",
-    description: `I took projects from client consultation to building consent submission, working on projects that fell into a wide spectrum of difficulty. The role involved leading my own projects by coordinating with external consultants/engineers to collate and deliver a set of construction documents. I also managed client expectations, deadlines and answered builder’s queries during construction phase.`,
+    description: `I took projects from client consultation to building consent submission and construction management, working on projects that fell into a wide spectrum of difficulty. I also managed client expectations, coordinated external consultants and helped project manage successful outcomes.`,
   },
   {
     title: "Architectural Graduate (Team Lead)",
     company: "Design Network Architecture",
     year: "Jan 2019 - Mar 2020",
-    description: `I was responsible for project managing a team of 3 junior developers while they learned the workflow/process and also provided mentorship and upskilling sessions on an individual basis. This was my first role in a leadership position where I found a natural ability to coordinate a team towards an outcome and how to work with different types of people. This position was also a 2nd promotion from starting as a junior, to intermediate, and then finally team lead. I was told that my quick progression over the year was due to my technical proficiency and the delivery of high quality work in an efficient manner.`,
+    description: `Responsible for leading a team of 3 junior developers while they learnt the workflow and building consent process. This was my first role in a leadership position where I found a natural ability to coordinate a team towards an outcome and how to work with different personalities. I was promoted twice in a year to land the team lead position, progressing from junior to intermediate technician prior.`,
   },
 ];
 
@@ -94,11 +94,11 @@ export interface Technical {
 export const technical: Technical[] = [
   {
     skill: "Javascript",
-    description: `Used to create 30+ projects. From games, to web sites and apps using vanilla DOM manipulation`,
+    description: `Used to create 30+ projects. From web apps to games with complex DOM manipulations`,
   },
   {
     skill: "Typescript",
-    description: `Used to build more resilient web apps and improve my developer experience`,
+    description: `Used to build type-safe web apps and improve my developer experience`,
   },
   {
     skill: "React.js",
@@ -106,26 +106,26 @@ export const technical: Technical[] = [
   },
   {
     skill: "Redux",
-    description: `Used to managed frontend states and dynamically show loading states of async data`,
+    description: `Used to manage client side state and dynamically sync external data`,
   },
   {
     skill: "Git",
-    description: `Used to version control, from early frontend JS projects to learning full stack development`,
+    description: `Used to version control projects from the earliest stages of my learning`,
   },
   {
-    skill: "SQLite3",
-    description: `Used as primary database on full stack projects. Familiar with table joins, queries and CRUD operations`,
+    skill: "SQL",
+    description: `Used as the primary database type on full stack projects. Familiar with SQLite3 and Postgres`,
   },
   {
     skill: "MongoDB",
-    description: `Used as primary database on personal full stack projects. Familiar with queries and CRUD operations`,
+    description: `Used as primary 'document' database. Familiar with Mongo Atlas and various query builders`,
   },
   {
     skill: "Express",
-    description: `Used to build backends for full stack projects (APIs and communication with databases)`,
+    description: `Used to build servers for full stack projects (database APIs & traditional HTTP servers)`,
   },
   {
     skill: "Figma/Adobe Suite",
-    description: `Used to wireframe designs and create custom assets`,
+    description: `Used to plan and wireframe mobile-first designs, and to create custom assets`,
   },
 ];
