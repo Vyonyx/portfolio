@@ -1,6 +1,22 @@
 ---
-import ImageSlider from "../components/ImageSlider.astro";
+import ImageGroup from "../components/ImageGroup.astro";
 import Layout from "../layouts/Layout.astro";
+import behaviour1 from "/thesis/behaviour/1.webp";
+import behaviour2 from "/thesis/behaviour/2.webp";
+import behaviour3 from "/thesis/behaviour/3.webp";
+import behaviour4 from "/thesis/behaviour/4.webp";
+import behaviour5 from "/thesis/behaviour/5.webp";
+import compositionAbstraction from "/thesis/Composition- Abstraction-2400w.webp";
+
+const behaviourImages = [
+  behaviour1,
+  behaviour2,
+  behaviour3,
+  behaviour4,
+  behaviour5,
+];
+
+const paragraphStyling = "text-sm text-justify max-w-2xl mx-auto";
 ---
 
 <Layout title="Thesis">
@@ -18,15 +34,24 @@ import Layout from "../layouts/Layout.astro";
         />
       </picture>
 
-      <p>
+      <p class={paragraphStyling}>
         My thesis focused on creating a tool/methodology to help designers
         simulate the behaviour of a demographic and use the resulting visual
         feedback to inform their spatial planning and design.
       </p>
 
       <h2 class="text-4xl text-center">Behaviour</h2>
-
-      <ImageSlider images={[]} />
+      <p class={paragraphStyling}>
+        Adding behaviour to particles through abstraction. Primitive behaviours
+        such as push & pull (to other particles and environmental factors) allow
+        simulation of basic behavioural responses.
+      </p>
+      <ImageGroup images={behaviourImages} />
+      <img
+        src={compositionAbstraction}
+        alt="particle behaviour abstraction"
+        loading="lazy"
+      />
     </main>
 
     <!-- <div
