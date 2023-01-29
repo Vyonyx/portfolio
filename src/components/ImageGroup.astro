@@ -1,0 +1,12 @@
+---
+const { images } = Astro.props;
+---
+
+<section>
+  {
+    images.map((image: any, index: number) => {
+      if (index === 0) return <img src={image} alt="particle behaviour" />;
+      return <img src={image} alt="particle behaviour" loading="lazy" />;
+    })
+  }
+</section>
