@@ -8,6 +8,15 @@ import behaviour4 from "/thesis/behaviour/4.webp";
 import behaviour5 from "/thesis/behaviour/5.webp";
 import compositionAbstraction from "/thesis/Composition- Abstraction-2400w.webp";
 
+import simulation1 from "/thesis/simulation/1.webp";
+import simulation2 from "/thesis/simulation/2.webp";
+import simulation3 from "/thesis/simulation/3.webp";
+import simulation5 from "/thesis/simulation/5.webp";
+import simulation6 from "/thesis/simulation/6.webp";
+import simulation7 from "/thesis/simulation/7.webp";
+import simulation9 from "/thesis/simulation/9.webp";
+import simulation10 from "/thesis/simulation/10.webp";
+
 const behaviourImages = [
   behaviour1,
   behaviour2,
@@ -16,7 +25,19 @@ const behaviourImages = [
   behaviour5,
 ];
 
+const simulationImages = [
+  simulation1,
+  simulation2,
+  simulation3,
+  simulation5,
+  simulation6,
+  simulation7,
+  simulation9,
+  simulation10,
+];
+
 const paragraphStyling = "text-sm text-justify max-w-2xl mx-auto";
+const subHeadingStyling = "text-4xl text-center";
 ---
 
 <Layout title="Thesis">
@@ -40,7 +61,7 @@ const paragraphStyling = "text-sm text-justify max-w-2xl mx-auto";
         feedback to inform their spatial planning and design.
       </p>
 
-      <h2 class="text-4xl text-center">Behaviour</h2>
+      <h2 class={subHeadingStyling}>Behaviour</h2>
       <p class={paragraphStyling}>
         Adding behaviour to particles through abstraction. Primitive behaviours
         such as push & pull (to other particles and environmental factors) allow
@@ -52,6 +73,14 @@ const paragraphStyling = "text-sm text-justify max-w-2xl mx-auto";
         alt="particle behaviour abstraction"
         loading="lazy"
       />
+
+      <h2 class={subHeadingStyling}>Simulation</h2>
+      <p class={paragraphStyling}>
+        Adding behaviour to particles through abstraction. Primitive behaviours
+        such as push & pull (to other particles and environmental factors) allow
+        simulation of basic behavioural responses.
+      </p>
+      <ImageGroup images={simulationImages} />
     </main>
 
     <!-- <div
