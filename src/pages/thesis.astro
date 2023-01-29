@@ -67,7 +67,7 @@ const subHeadingStyling = "text-4xl text-center";
     class="p-20 bg-neutral-900 text-white w-screen min-h-screen relative flex flex-col items-center gap-10"
   >
     <main class="max-w-4xl grid gap-10">
-      <h1 class="text-6xl text-center">Emergent Ecologys</h1>
+      <h1 class="text-6xl text-center">Emergent Ecologies</h1>
       <picture>
         <source srcset="/thesis/Aerial-2400w.webp" />
         <img
@@ -78,16 +78,21 @@ const subHeadingStyling = "text-4xl text-center";
       </picture>
 
       <p class={paragraphStyling}>
-        My thesis focused on creating a tool/methodology to help designers
-        simulate the behaviour of a demographic and use the resulting visual
-        feedback to inform their spatial planning and design.
+        My architectural thesis focuses on creating a tool/methodology to help
+        designers simulate the behaviour of a demographic and use the resulting
+        visual feedback to inform their spatial planning and design.
       </p>
 
       <h2 class={subHeadingStyling}>Behaviour</h2>
       <p class={paragraphStyling}>
-        Adding behaviour to particles through abstraction. Primitive behaviours
-        such as push & pull (to other particles and environmental factors) allow
-        simulation of basic behavioural responses.
+        The primary challenge is how we can assign behaviour to particles.
+        Behaviour is qualitative and must be translated to quantitative measures
+        through abstraction. I chose to use attraction and repulsion between
+        different types of particles (demographics) and artefacts in an
+        environment. I would consider this a bottom-up approach that leads to
+        unpredictable results that we simply cannot plan for. Conway's "Game of
+        Life" is a mathematical example that shows just how complex interactions
+        can get, even with primitive behaviours.
       </p>
       <ImageGroup images={behaviourImages} />
       <img
@@ -98,17 +103,26 @@ const subHeadingStyling = "text-4xl text-center";
 
       <h2 class={subHeadingStyling}>Simulation</h2>
       <p class={paragraphStyling}>
-        Adding behaviour to particles through abstraction. Primitive behaviours
-        such as push & pull (to other particles and environmental factors) allow
-        simulation of basic behavioural responses.
+        This phase of the thesis tested how to apply behaviour to particles and
+        how to map interactions. Dense clusters occurred within areas of
+        overlap, highlighting areas suited for commercial and mixed-use. The
+        interactions were mapped using particle tails, showing where the
+        particle had travelled over time. The mapped geometry can then be used
+        by designers to understand how to optimise spatial design through visual
+        feedback.
       </p>
       <ImageGroup images={simulationImages} />
 
       <h2 class={subHeadingStyling}>Geometry</h2>
       <p class={paragraphStyling}>
-        Adding behaviour to particles through abstraction. Primitive behaviours
-        such as push & pull (to other particles and environmental factors) allow
-        simulation of basic behavioural responses.
+        I chose to use the refined methodology for the final phase of my thesis.
+        I chose a section of Mumbai, India for my redesign and simulated the
+        various people and existing environment to understand how I could best
+        plan my redesign. The mapped data was used to manually place geometry
+        into the scene based on density and oberserable patterns, leading to my
+        final solution. I chose to use abstract geometries to take the emphasis
+        away from the architectural design, and instead highlight the method and
+        it's potential for spatial planning.
       </p>
       <ImageGroup images={geometryImages} />
     </main>
