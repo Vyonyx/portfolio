@@ -1,16 +1,21 @@
 ---
-import LargeCard from "./LargeCard.astro"
-import { architectureProject } from "../data"
-const section = 'architecture'
+import LargeCard from "./LargeCard.astro";
+import { architectureProject } from "../data";
+const section = "architecture";
 ---
-<section class="h-screen bg-neutral-900 flex flex-col justify-center items-center gap-5 px-10 py-20 lg:gap-20 lg:p-20 relative">
-  <h1 id={`${section}`} class="font-bodoni text-4xl lg:text-6xl text-white">Thesis</h1>
+
+<section
+  class="h-screen bg-neutral-900 flex flex-col justify-center items-center gap-5 px-10 py-20 lg:gap-20 lg:p-20 relative"
+>
+  <h1 id={`${section}`} class="font-bodoni text-4xl lg:text-6xl text-white">
+    Thesis
+  </h1>
   <LargeCard project={architectureProject} section={section} />
 </section>
 
 <script>
-  import { renderAnimation } from '../utils'
+  import { renderAnimation } from "../utils";
 
-  const section = 'architecture'
-  renderAnimation(section)
+  const section = "architecture";
+  renderAnimation(section);
 </script>
