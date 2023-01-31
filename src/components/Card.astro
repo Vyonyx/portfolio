@@ -11,7 +11,13 @@ const iconSize = "24";
 >
   <h1 class="font-roboto text-2xl">{name}</h1>
   <p class="font-roboto text-sm lg:mb-10">{description}</p>
-  <img class="" src={thumbnail} alt={`${name} project by Shaneel Kumar`} />
+  <a href={liveLink ? liveLink : githubLink} class="w-full overflow-hidden">
+    <img
+      class="hover:scale-110 ease-in duration-200"
+      src={thumbnail}
+      alt={`${name} project by Shaneel Kumar`}
+    />
+  </a>
 
   <span class="flex justify-center gap-10 justify-self-end">
     {
