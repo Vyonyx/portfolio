@@ -1,13 +1,136 @@
 ---
+import ImageGroup from "../components/ImageGroup.astro";
 import Layout from "../layouts/Layout.astro";
+import behaviour1 from "/thesis/behaviour/1.webp";
+import behaviour2 from "/thesis/behaviour/2.webp";
+import behaviour3 from "/thesis/behaviour/3.webp";
+import behaviour4 from "/thesis/behaviour/4.webp";
+import behaviour5 from "/thesis/behaviour/5.webp";
+import compositionAbstraction from "/thesis/Composition- Abstraction-2400w.webp";
+
+import simulation1 from "/thesis/simulation/1.webp";
+import simulation2 from "/thesis/simulation/2.webp";
+import simulation3 from "/thesis/simulation/3.webp";
+import simulation5 from "/thesis/simulation/5.webp";
+import simulation6 from "/thesis/simulation/6.webp";
+import simulation7 from "/thesis/simulation/7.webp";
+import simulation9 from "/thesis/simulation/9.webp";
+import simulation10 from "/thesis/simulation/10.webp";
+
+import geometry1 from "/thesis/geometry/1.webp";
+import geometry2 from "/thesis/geometry/2.webp";
+import geometry3 from "/thesis/geometry/3.webp";
+import geometry4 from "/thesis/geometry/4.webp";
+import geometry5 from "/thesis/geometry/5.webp";
+import geometry6 from "/thesis/geometry/6.webp";
+import geometry7 from "/thesis/geometry/7.webp";
+import geometry8 from "/thesis/geometry/8.webp";
+import geometry9 from "/thesis/geometry/9.webp";
+
+const behaviourImages = [
+  behaviour1,
+  behaviour2,
+  behaviour3,
+  behaviour4,
+  behaviour5,
+];
+
+const simulationImages = [
+  simulation1,
+  simulation2,
+  simulation3,
+  simulation5,
+  simulation6,
+  simulation7,
+  simulation9,
+  simulation10,
+];
+
+const geometryImages = [
+  geometry1,
+  geometry2,
+  geometry3,
+  geometry4,
+  geometry5,
+  geometry6,
+  geometry7,
+  geometry8,
+  geometry9,
+];
+
+const paragraphStyling = "text-sm text-justify max-w-2xl mx-auto";
+const subHeadingStyling = "text-4xl text-center";
 ---
 
 <Layout title="Thesis">
-  <main class="pt-20 bg-neutral-900 text-white w-screen h-screen relative">
-    <div
+  <div
+    class="p-20 bg-neutral-900 text-white w-screen min-h-screen relative flex flex-col items-center gap-10"
+  >
+    <main class="max-w-4xl grid gap-10">
+      <h1 class="text-6xl text-center">Emergent Ecologies</h1>
+      <picture>
+        <source srcset="/thesis/Aerial-2400w.webp" />
+        <img
+          src="/thesis/Aerial-2400w.webp"
+          alt="thesis aerial render"
+          class="object-scale-down"
+        />
+      </picture>
+
+      <p class={paragraphStyling}>
+        My architectural thesis focuses on creating a tool/methodology to help
+        designers simulate the behaviour of a demographic and use the resulting
+        visual feedback to inform their spatial planning and design.
+      </p>
+
+      <h2 class={subHeadingStyling}>Behaviour</h2>
+      <p class={paragraphStyling}>
+        The primary challenge is how we can assign behaviour to particles.
+        Behaviour is qualitative and must be translated to quantitative measures
+        through abstraction. I chose to use attraction and repulsion between
+        different types of particles (demographics) and artefacts in an
+        environment. I would consider this a bottom-up approach that leads to
+        unpredictable results that we simply cannot plan for. Conway's "Game of
+        Life" is a mathematical example that shows just how complex interactions
+        can get, even with primitive behaviours.
+      </p>
+      <ImageGroup images={behaviourImages} />
+      <img
+        src={compositionAbstraction}
+        alt="particle behaviour abstraction"
+        loading="lazy"
+      />
+
+      <h2 class={subHeadingStyling}>Simulation</h2>
+      <p class={paragraphStyling}>
+        This phase of the thesis tested how to apply behaviour to particles and
+        how to map interactions. Dense clusters occurred within areas of
+        overlap, highlighting areas suited for commercial and mixed-use. The
+        interactions were mapped using particle tails, showing where the
+        particle had travelled over time. The mapped geometry can then be used
+        by designers to understand how to optimise spatial design through visual
+        feedback.
+      </p>
+      <ImageGroup images={simulationImages} />
+
+      <h2 class={subHeadingStyling}>Geometry</h2>
+      <p class={paragraphStyling}>
+        I chose to use the refined methodology for the final phase of my thesis.
+        I chose a section of Mumbai, India for my redesign and simulated the
+        various people and existing environment to understand how I could best
+        plan my redesign. The mapped data was used to manually place geometry
+        into the scene based on density and oberserable patterns, leading to my
+        final solution. I chose to use abstract geometries to take the emphasis
+        away from the architectural design, and instead highlight the method and
+        it's potential for spatial planning.
+      </p>
+      <ImageGroup images={geometryImages} />
+    </main>
+
+    <!-- <div
       class="bg-red-500 px-10 py-6 shadow-md text-6xl absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 overflow-y-hidden"
     >
       <h1>Thesis Coming Soon</h1>
-    </div>
-  </main>
+    </div> -->
+  </div>
 </Layout>
