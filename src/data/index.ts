@@ -1,10 +1,4 @@
-export interface Project {
-  name: string;
-  thumbnail: string;
-  description: string;
-  githubLink?: string;
-  liveLink?: string;
-}
+import type { Project } from "../env";
 
 export const projects: Project[] = [
   {

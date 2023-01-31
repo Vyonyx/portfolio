@@ -1,0 +1,62 @@
+---
+export interface Props {
+  headings: string[];
+}
+
+const { headings } = Astro.props;
+const headingStyle = "text-xl whitespace-nowrap";
+---
+
+<div
+  class="scroll-outer-container text-white z-10 w-96 mx-auto overflow-hidden border-l-2 border-r-2 border-white opacity-0 absolute bottom-40"
+>
+  <div class="scroll-inner-container flex gap-[20px]" data-flex-gap={20}>
+    {headings.map((heading) => <h2 class={headingStyle}>{heading}</h2>)}
+    <!-- Require two sets of headings -->
+    {headings.map((heading) => <h2 class={headingStyle}>{heading}</h2>)}
+  </div>
+</div>
+
+<script>
+  import gsap from "gsap";
+
+  const outerContainer = document.querySelector(
+    ".scroll-outer-container"
+  ) as HTMLDivElement;
+  const innerContainer = document.querySelector(
+    ".scroll-inner-container"
+  ) as HTMLDivElement;
+  const firstChild = document.querySelector("h2") as HTMLHeadElement;
+  const firstChildWidth = Number(firstChild.clientWidth);
+
+  outerContainer.style.width = `${firstChildWidth}px`;
+
+  innerWidth = innerContainer.scrollWidth;
+  const containerGap = Number(
+    innerContainer.getAttribute("data-flex-gap")
+  ) as number;
+
+  const tl = gsap.timeline({ defaults: { ease: "linear" } });
+  tl.fromTo(
+    outerContainer,
+    {
+      opacity: 0,
+      x: 100,
+    },
+    {
+      opacity: 1,
+      x: 0,
+      delay: 3.5,
+      duration: 1,
+      ease: "power2.easeOut",
+    }
+  ).to(
+    innerContainer,
+    {
+      x: `-${(innerWidth + containerGap) / 2}px`,
+      duration: 10,
+      repeat: -1,
+    },
+    "< 0.2"
+  );
+</script>
