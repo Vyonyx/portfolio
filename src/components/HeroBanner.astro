@@ -1,4 +1,5 @@
 ---
+import InfiniteScrollText from "./InfiniteScrollText.astro";
 ---
 
 <section
@@ -19,6 +20,9 @@
     id="currentTitle"
     class="font-bodoni text-xl lg:text-5xl text-white z-10 relative flex"
   ></span>
+  <InfiniteScrollText
+    headings={["Full Stack Developer", "Designer", "React Developer"]}
+  />
   <div
     id="scrollPrompt"
     class="z-10 absolute bottom-10 flex flex-col items-center"
