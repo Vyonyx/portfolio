@@ -1,23 +1,25 @@
 ---
 import { experience } from "../data";
 import ListItem from "./ListItem.astro";
-const { sectionID } = Astro.props
+const { sectionID } = Astro.props;
 ---
-<section
-  id={sectionID}
-  class="text-white col-span-2"
->
+
+<section id={sectionID} class="text-white col-span-1">
   <h1 class="text-4xl mb-6">Experience</h1>
   <ul class="w-full text-md lg:text-lg">
-    {experience.map(({title, company, year, description}) => {
-      return (
-        <ListItem
-          main={title}
-          secondary={company}
-          year={year}
-          description={description}
-        />
-      )
-    })}
+    {
+      experience.map(({ title, company, year, description }, index) => {
+        return (
+          <ListItem
+            main={title}
+            secondary={company}
+            year={year}
+            description={description}
+            hasBorder={index < experience.length - 1}
+          />
+        );
+      })
+    }
   </ul>
 </section>
+
