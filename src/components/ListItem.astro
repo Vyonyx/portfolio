@@ -4,15 +4,19 @@ export interface Props {
   secondary: string;
   year: string;
   description?: string | null;
+  hasBorder: boolean;
 }
 
-const { main, secondary, year, description } = Astro.props
+const { main, secondary, year, description, hasBorder } = Astro.props;
 ---
-<li class="max-w-3xl py-6 border-b-2 border-white">
+
+<li class={`md:max-w-4xl py-6 ${hasBorder && "border-b-2 border-white"}`}>
   <p class="bold">{main}</p>
   <p class="italic">{secondary}</p>
   <h3 class="place-self-end text-sm">{year}</h3>
-  {description && (
-    <p class="col-span-3 text-sm mt-2 max-w-md md:max-w-3xl">{description}</p>
-  )}
+  {
+    description && (
+      <p class="col-span-3 text-sm mt-2 max-w-md md:max-w-3xl">{description}</p>
+    )
+  }
 </li>
