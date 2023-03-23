@@ -12,11 +12,12 @@ export function renderAnimation(section: string) {
       start: "top 80%",
       end: "top 30%",
       scrub: 2,
+      // markers: true,
     },
   });
 
   tl.from(title, {
-    opacity: 0,
+    scale: 0.8,
     duration: 1,
     y: window.innerWidth < 768 ? -10 : -50,
     ease: "sin.easeInOut",
