@@ -1,6 +1,6 @@
 ---
-import LargeCard from "./LargeCard.astro";
-import { architectureProject } from "../data";
+import LargeCard from "../../components/LargeCard.astro";
+import { architectureProject } from "../../data";
 const section = "architecture";
 ---
 
@@ -14,7 +14,7 @@ const section = "architecture";
 </section>
 
 <script>
-  import { renderAnimation } from "../utils";
+  import { renderAnimation } from "../../utils";
 
   const section = "architecture";
   renderAnimation(section);
