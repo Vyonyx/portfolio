@@ -1,6 +1,6 @@
 ---
-import Card from "./Card.astro";
-import { miscProjects } from "../data";
+import Card from "../../components/Card.astro";
+import { miscProjects } from "../../data";
 const section = "misc-projects";
 ---
 
@@ -21,7 +21,7 @@ const section = "misc-projects";
 </section>
 
 <script>
-  import { renderAnimation } from "../utils";
+  import { renderAnimation } from "../../utils";
 
   const section = "misc-projects";
   renderAnimation(section);

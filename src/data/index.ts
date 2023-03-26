@@ -1,8 +1,12 @@
 import type { Project } from "../env";
 
+export const NEIGHBOURLY_ID = 'neighbourly'
+export const AT_WHAT_COST_ID = 'at-what-cost'
+
 export const projects: Project[] = [
   {
     name: "Neighbourly",
+    id: NEIGHBOURLY_ID,
     thumbnail: "/project_previews/neighbourly.png",
     description:
       "A web app that allows users to trade or give away essentials to their neighbours. The app aims to create new relationships between neighbours, leading to stronger communities. Users can upload and manage their listings, browse a marketplace to find items and communicate with other users through an instant messaging feature. The minimum viable product focuses on the trade of food and ingredients, but future updates will endeavour to create a general marketplace where neighbours can list anything to help their community (i.e school uniforms, baby clothes, services).",
@@ -11,6 +15,7 @@ export const projects: Project[] = [
   },
   {
     name: "At What Cost",
+    id: AT_WHAT_COST_ID,
     thumbnail: "/project_previews/AWC-Preview.png",
     description:
       "A full-stack web app that helps users break down their monthly spending habits. Users can upload a bank statement in .CSV format to display a list of transactions to that they can apply filters. The app processes the user's filters and displays a cost breakdown that gives instant feedback about where a user's money is going.",

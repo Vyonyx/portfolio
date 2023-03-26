@@ -1,6 +1,6 @@
 ---
-import Card from "./Card.astro";
-import { projects } from "../data";
+import Card from "../../components/Card.astro";
+import { projects } from "../../data";
 const section = "portfolio";
 ---
 
@@ -21,7 +21,7 @@ const section = "portfolio";
 </section>
 
 <script>
-  import { renderAnimation } from "../utils";
+  import { renderAnimation } from "../../utils";
 
   const section = "portfolio";
   renderAnimation(section);

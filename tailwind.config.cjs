@@ -9,6 +9,9 @@ module.exports = {
         roboto: ['Roboto', 'san-serif'],
         garramond: ['EB Garamond', 'serif'],
       },
+      colors: {
+        'highlight': '#FFF735'
+      }
     },
   },
 }
