@@ -1,0 +1,15 @@
+---
+interface Props {
+  imagePaths: string[];
+  name: string;
+}
+
+const { imagePaths, name } = Astro.props;
+---
+
+<div class="flex flex-row overflow-x-scroll">
+  {
+    imagePaths &&
+      imagePaths.map((path) => <img src={path} alt={name + "screenshot"} />)
+  }
+</div>

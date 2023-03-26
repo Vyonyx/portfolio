@@ -4,6 +4,7 @@ import { projects, icons } from "../../data/index";
 import GithubLink from "../../components/GithubLink.astro";
 import LiveLink from "../../components/LiveLink.astro";
 import Skills from "./Skills.astro";
+import ImageCarousel from "../../components/ImageCarousel.astro";
 const { id } = Astro.props;
 const projectDetails = projects.find((project) => project.id === id);
 if (!projectDetails) return;
@@ -19,7 +20,14 @@ const { name, description, thumbnail, githubLink, liveLink, skills } =
     <h1 class="text-5xl lg:text-8xl lg:mb-16">{name}</h1>
     <p class="text-justify">{description}</p>
 
-    <img src={thumbnail} class="mt-6" />
+    {
+      thumbnail && (
+        <ImageCarousel
+          imagePaths={[thumbnail, thumbnail, thumbnail]}
+          name={name}
+        />
+      )
+    }
 
     {skills && <Skills skills={skills} />}
 
