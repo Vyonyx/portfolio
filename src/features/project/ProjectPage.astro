@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { projects } from "../../data/index";
+const { id } = Astro.props;
+const projectDetails = projects.find((project) => project.id === id);
+if (!projectDetails) return;
+
+const { name, description, thumbnail, githubLink, liveLink } = projectDetails;
+---
+
+<Layout title={name}>
+  <main class="bg-neutral-900 text-white text-sm md:text-md p-10 pt-20 md:p-20">
+    <h1 class="text-2xl">{name}</h1>
+    <p>{description}</p>
+    <a href={githubLink}>GitHub Link</a>
+    <a href={liveLink}>Live Link</a>
+  </main>
+</Layout>

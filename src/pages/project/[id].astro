@@ -1,0 +1,15 @@
+---
+import { AT_WHAT_COST_ID, NEIGHBOURLY_ID } from "../../data";
+import ProjectPage from "../../features/project/ProjectPage.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { id: NEIGHBOURLY_ID } },
+    { params: { id: AT_WHAT_COST_ID } },
+  ];
+}
+
+const { id } = Astro.params;
+---
+
+<ProjectPage id={id} />
