@@ -1,13 +1,14 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { projects } from "../../data/index";
+import { projects, icons } from "../../data/index";
 import GithubLink from "../../components/GithubLink.astro";
 import LiveLink from "../../components/LiveLink.astro";
 const { id } = Astro.props;
 const projectDetails = projects.find((project) => project.id === id);
 if (!projectDetails) return;
 
-const { name, description, thumbnail, githubLink, liveLink } = projectDetails;
+const { name, description, thumbnail, githubLink, liveLink, skills } =
+  projectDetails;
 ---
 
 <Layout title={name}>
@@ -18,6 +19,25 @@ const { name, description, thumbnail, githubLink, liveLink } = projectDetails;
     <p class="text-justify">{description}</p>
 
     <img src={thumbnail} class="mt-6" />
+
+    <ul class="flex flex-row gap-x-4 justify-center items-center">
+      {
+        skills?.map((skill) => {
+          const { path, link } = icons[skill as keyof typeof icons];
+          return (
+            <li>
+              <a href={link} target="_blank">
+                <img
+                  src={path}
+                  alt={`Official ${skill} documentation`}
+                  class="w-14 aspect-square fill-red-500"
+                />
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
 
     {
       (githubLink || liveLink) && (
