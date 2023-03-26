@@ -2,7 +2,7 @@
 import GithubLink from "./GithubLink.astro";
 import LiveLink from "./LiveLink.astro";
 const { project, section } = Astro.props;
-const { name, description, thumbnail, githubLink, liveLink } = project;
+const { name, description, thumbnail, githubLink, liveLink, id } = project;
 ---
 
 <div
@@ -19,9 +19,21 @@ const { name, description, thumbnail, githubLink, liveLink } = project;
     />
   </a>
 
-  <span class="flex justify-center gap-10 justify-self-end">
-    {githubLink && <GithubLink githubLink={githubLink} />}
+  {
+    id ? (
+      <a
+        class="text-xl mx-auto py-1 px-4 border-2 border-white hover:border-highlight"
+        href={`/project/${id}`}
+        target="_blank"
+      >
+        View
+      </a>
+    ) : (
+      <span class="flex justify-center gap-10 justify-self-end">
+        {githubLink && <GithubLink githubLink={githubLink} />}
 
-    {liveLink && <LiveLink liveLink={liveLink} />}
-  </span>
+        {liveLink && <LiveLink liveLink={liveLink} />}
+      </span>
+    )
+  }
 </div>

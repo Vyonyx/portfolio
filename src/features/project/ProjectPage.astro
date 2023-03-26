@@ -22,8 +22,8 @@ const { name, description, thumbnail, githubLink, liveLink } = projectDetails;
     {
       (githubLink || liveLink) && (
         <ul class="grid grid-cols-2 gap-10 border-2 border-white place-items-center place-content-center p-4 mt-5">
-          {githubLink && <GithubLink githubLink={githubLink || ""} />}
-          {liveLink && <LiveLink liveLink={liveLink || ""} />}
+          {githubLink && <GithubLink githubLink={githubLink} />}
+          {liveLink && <LiveLink liveLink={liveLink} />}
         </ul>
       )
     }
