@@ -18,24 +18,26 @@ const { name, description, thumbnail, githubLink, liveLink, skills } =
     <h1 class="text-5xl lg:text-8xl lg:mb-16">{name}</h1>
     <p class="text-justify">{description}</p>
 
+    <img src={thumbnail} class="mt-6" />
+
     <ul class="flex flex-row gap-x-4 justify-center items-center">
       {
         skills?.map((skill) => {
-          const path = icons[skill as keyof typeof icons];
+          const { path, link } = icons[skill as keyof typeof icons];
           return (
             <li>
-              <img
-                src={path}
-                alt="Link logo showing skills used"
-                class="w-20 aspect-square"
-              />
+              <a href={link} target="_blank">
+                <img
+                  src={path}
+                  alt={`Official ${skill} documentation`}
+                  class="w-14 aspect-square fill-red-500"
+                />
+              </a>
             </li>
           );
         })
       }
     </ul>
-
-    <img src={thumbnail} class="mt-6" />
 
     {
       (githubLink || liveLink) && (

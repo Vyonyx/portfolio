@@ -4,15 +4,42 @@ export const NEIGHBOURLY_ID = 'neighbourly'
 export const AT_WHAT_COST_ID = 'at-what-cost'
 
 export const icons = {
-  'React': '/icons/React.svg',
-  'Express': '/icons/Express.svg',
-  'MaterialUI': '/icons/MaterialUI.svg',
-  'MongoDB': '/icons/MongoDB.svg',
-  'NextJS': '/icons/NextJS.svg',
-  'Prisma': '/icons/Prisma.svg',
-  'Redux': '/icons/Redux.svg',
-  'TailwindCSS': '/icons/TailwindCSS.svg',
-  'TypeScript': '/icons/TypeScript.svg',
+  'React': {
+    path: '/icons/React.svg',
+    link: 'https://react.dev/',
+  },
+  'Express': {
+    path: '/icons/Express.svg',
+    link: 'https://expressjs.com/',
+  },
+  'MaterialUI': {
+    path: '/icons/MaterialUI.svg',
+    link: 'https://mui.com/',
+  },
+  'MongoDB': {
+    path: '/icons/MongoDB.svg',
+    link: 'https://www.mongodb.com/',
+  },
+  'NextJS': {
+    path: '/icons/NextJS.svg',
+    link: 'https://nextjs.org/',
+  },
+  'Prisma': {
+    path: '/icons/Prisma.svg',
+    link: 'https://www.prisma.io/',
+  },
+  'Redux': {
+    path: '/icons/Redux.svg',
+    link: 'https://redux.js.org/',
+  },
+  'TailwindCSS': {
+    path: '/icons/TailwindCSS.svg',
+    link: 'https://tailwindcss.com/',
+  },
+  'TypeScript': {
+    path: '/icons/TypeScript.svg',
+    link: 'https://www.typescriptlang.org/',
+  },
 }
 
 export const projects: Project[] = [
