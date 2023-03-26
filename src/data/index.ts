@@ -3,26 +3,16 @@ import type { Project } from "../env";
 export const NEIGHBOURLY_ID = 'neighbourly'
 export const AT_WHAT_COST_ID = 'at-what-cost'
 
-export const REACT_ICON = 'React'
-export const EXPRESS_ICON = 'Express'
-export const MATERIALUI_ICON = 'MaterialUI'
-export const MONGODB_ICON = 'MongoDB'
-export const NEXTJS_ICON = 'NextJS'
-export const PRISMA_ICON = 'Prisma'
-export const REDUX_ICON = 'Redux'
-export const TAILWINDCSS_ICON = 'TailwindCSS'
-export const TYPESCRIPT_ICON = 'TypeScript'
-
 export const icons = {
-  REACT_ICON: '/icons/React.svg',
-  EXPRESS_ICON: '/icons/Express.svg',
-  MATERIALUI_ICON: '/icons/MaterialUI.svg',
-  MONGODB_ICON: '/icons/MongoDB.svg',
-  NEXTJS_ICON: '/icons/NextJS.svg',
-  PRISMA_ICON: '/icons/Prisma.svg',
-  REDUX_ICON: '/icons/Redux.svg',
-  TAILWINDCSS_ICON: '/icons/TailwindCSS.svg',
-  TYPESCRIPT_ICON: '/icons/TypeScript.svg',
+  'React': '/icons/React.svg',
+  'Express': '/icons/Express.svg',
+  'MaterialUI': '/icons/MaterialUI.svg',
+  'MongoDB': '/icons/MongoDB.svg',
+  'NextJS': '/icons/NextJS.svg',
+  'Prisma': '/icons/Prisma.svg',
+  'Redux': '/icons/Redux.svg',
+  'TailwindCSS': '/icons/TailwindCSS.svg',
+  'TypeScript': '/icons/TypeScript.svg',
 }
 
 export const projects: Project[] = [
@@ -34,7 +24,7 @@ export const projects: Project[] = [
       "A web app that allows users to trade or give away essentials to their neighbours. The app aims to create new relationships between neighbours, leading to stronger communities. Users can upload and manage their listings, browse a marketplace to find items and communicate with other users through an instant messaging feature. The minimum viable product focuses on the trade of food and ingredients, but future updates will endeavour to create a general marketplace where neighbours can list anything to help their community (i.e school uniforms, baby clothes, services).",
     githubLink: "https://github.com/Vyonyx/neighbourly",
     liveLink: "https://neighbourly.vercel.app/",
-    skills: [TYPESCRIPT_ICON, NEXTJS_ICON, REDUX_ICON, TAILWINDCSS_ICON, MONGODB_ICON]
+    skills: ['TypeScript', 'NextJS', 'Redux', 'TailwindCSS', 'MongoDB']
   },
   {
     name: "At What Cost",
@@ -44,6 +34,7 @@ export const projects: Project[] = [
       "A full-stack web app that helps users break down their monthly spending habits. Users can upload a bank statement in .CSV format to display a list of transactions to that they can apply filters. The app processes the user's filters and displays a cost breakdown that gives instant feedback about where a user's money is going.",
     githubLink: "https://github.com/Vyonyx/at-what-cost-FE",
     liveLink: "https://at-what-cost-fe.vercel.app/",
+    skills: ['TypeScript', 'React', 'Redux', 'MaterialUI', 'Express', 'Prisma']
   },
 ];
 
@@ -54,7 +45,6 @@ export const miscProjects: Project[] = [
     description:
       "My first React project. This frontend app allows users to quickly build a CV and save the output as a PDF.",
     githubLink: "https://github.com/Vyonyx/cv-maker",
-    skills: [TYPESCRIPT_ICON, REACT_ICON, REDUX_ICON, MATERIALUI_ICON, EXPRESS_ICON, PRISMA_ICON]
   },
   {
     name: "Analog Clock",
