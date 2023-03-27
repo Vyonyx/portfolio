@@ -7,9 +7,83 @@ interface Props {
 const { imagePaths, name } = Astro.props;
 ---
 
-<div class="flex flex-row overflow-x-scroll">
-  {
-    imagePaths &&
-      imagePaths.map((path) => <img src={path} alt={name + "screenshot"} />)
-  }
+<div class="relative w-full h-full">
+  <div
+    id="container"
+    class="relative flex flex-row w-full h-full overflow-x-hidden"
+  >
+    {
+      imagePaths &&
+        imagePaths.map((path) => (
+          <img data-carousel-image src={path} alt={name + "screenshot"} />
+        ))
+    }
+  </div>
+
+  <button id="backwardBtn" type="button">
+    <img
+      class="w-10 aspect-square absolute top-1/2 -left-14 rotate-180"
+      src="/Arrow.svg"
+      alt="go back one image"
+    />
+  </button>
+
+  <button id="forwardBtn" type="button">
+    <img
+      class="w-10 aspect-square absolute top-1/2 -right-14"
+      src="/Arrow.svg"
+      alt="go forward one image"
+    />
+  </button>
 </div>
+
+<script>
+  const container = document.getElementById("container") as HTMLDivElement;
+  const backwardBtn = document.getElementById("backwardBtn");
+  const forwardBtn = document.getElementById("forwardBtn");
+
+  let imageIndex = 0;
+  const images = document.querySelectorAll("[data-carousel-image]");
+  let correction = false;
+
+  function getImageWidth(forward: boolean = true) {
+    correction = false;
+    let nextImage = images[forward ? imageIndex + 1 : imageIndex - 1];
+
+    if (nextImage === undefined) {
+      nextImage = forward ? images[0] : images[images.length - 1];
+      correction = true;
+    }
+
+    const imageCoords = nextImage?.getClientRects()[0];
+    const { width } = imageCoords;
+    return width;
+  }
+
+  function goForwardOneImage() {
+    const width = getImageWidth();
+
+    if (correction) {
+      container.scrollLeft = 0;
+      imageIndex = 0;
+    } else {
+      container.scrollLeft += width;
+      imageIndex++;
+    }
+  }
+
+  function goBackwardOneImage() {
+    const width = getImageWidth(false);
+
+    if (correction) {
+      container.scrollLeft = 3000;
+      imageIndex = images.length - 1;
+    } else {
+      container.scrollLeft -= width;
+      imageIndex--;
+    }
+  }
+
+  backwardBtn?.addEventListener("click", goBackwardOneImage);
+  forwardBtn?.addEventListener("click", goForwardOneImage);
+</script>
