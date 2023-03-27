@@ -10,7 +10,7 @@ const { imagePaths, name } = Astro.props;
 <div class="relative w-full h-full">
   <div
     id="container"
-    class="relative flex flex-row w-full h-full overflow-x-hidden"
+    class="relative flex flex-row w-full h-full overflow-x-scroll"
   >
     {
       imagePaths &&
@@ -44,15 +44,12 @@ const { imagePaths, name } = Astro.props;
 
   let imageIndex = 0;
   const images = document.querySelectorAll("[data-carousel-image]");
-  let correction = false;
 
   function getImageWidth(forward: boolean = true) {
-    correction = false;
     let nextImage = images[forward ? imageIndex + 1 : imageIndex - 1];
 
     if (nextImage === undefined) {
-      nextImage = forward ? images[0] : images[images.length - 1];
-      correction = true;
+      return null;
     }
 
     const imageCoords = nextImage?.getClientRects()[0];
@@ -63,7 +60,7 @@ const { imagePaths, name } = Astro.props;
   function goForwardOneImage() {
     const width = getImageWidth();
 
-    if (correction) {
+    if (width === null) {
       container.scrollLeft = 0;
       imageIndex = 0;
     } else {
@@ -75,7 +72,7 @@ const { imagePaths, name } = Astro.props;
   function goBackwardOneImage() {
     const width = getImageWidth(false);
 
-    if (correction) {
+    if (width === null) {
       container.scrollLeft = 3000;
       imageIndex = images.length - 1;
     } else {
