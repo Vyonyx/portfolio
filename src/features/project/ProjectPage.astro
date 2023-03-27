@@ -9,8 +9,15 @@ const { id } = Astro.props;
 const projectDetails = projects.find((project) => project.id === id);
 if (!projectDetails) return;
 
-const { name, description, thumbnail, githubLink, liveLink, skills } =
-  projectDetails;
+const {
+  name,
+  description,
+  thumbnail,
+  githubLink,
+  liveLink,
+  skills,
+  screenshots,
+} = projectDetails;
 ---
 
 <Layout title={name}>
@@ -20,14 +27,7 @@ const { name, description, thumbnail, githubLink, liveLink, skills } =
     <h1 class="text-5xl lg:text-8xl lg:mb-16">{name}</h1>
     <p class="text-justify">{description}</p>
 
-    {
-      thumbnail && (
-        <ImageCarousel
-          imagePaths={[thumbnail, thumbnail, thumbnail]}
-          name={name}
-        />
-      )
-    }
+    {screenshots && <ImageCarousel imagePaths={screenshots} name={name} />}
 
     {skills && <Skills skills={skills} />}
 
