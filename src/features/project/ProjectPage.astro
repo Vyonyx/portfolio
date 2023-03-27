@@ -22,9 +22,16 @@ const {
 
 <Layout title={name}>
   <main
-    class="max-w-5xl 2xl:max-w-7xl mx-auto bg-neutral-900 text-white text-sm md:text-lg p-10 pt-20 md:p-20 grid grid-cols-1 place-items-center auto-rows-auto gap-y-10"
+    class="max-w-5xl 2xl:max-w-7xl mx-auto bg-neutral-900 text-white text-sm md:text-lg p-10 pt-20 md:p-20 grid grid-cols-1 place-items-center auto-rows-auto gap-y-10 relative"
   >
-    <h1 class="text-5xl lg:text-8xl lg:mb-16">{name}</h1>
+    <div
+      id="curtain"
+      class="fixed top-0 left-0 w-screen h-screen z-10 bg-black"
+    >
+    </div>
+    <h1 id="project-title" class="opacity-0 text-5xl lg:text-8xl lg:mb-16 z-20">
+      {name}
+    </h1>
     <p class="text-justify">{description}</p>
 
     {screenshots && <ImageCarousel imagePaths={screenshots} name={name} />}
@@ -41,3 +48,43 @@ const {
     }
   </main>
 </Layout>
+
+<script>
+  import gsap from "gsap";
+  const curtain = document.getElementById("curtain");
+  const projectTitle = document.getElementById("project-title");
+
+  const tl = gsap.timeline({ ease: "power2.easeOut" });
+
+  tl.fromTo(
+    projectTitle,
+    {
+      y: "30vh",
+      ease: "slowmo",
+      opacity: 1,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.5,
+      delay: 1.5,
+    }
+  )
+    .to(
+      curtain,
+      {
+        y: "-100%",
+        duration: 0.5,
+      },
+      "<-0.025"
+    )
+    .from(
+      "p",
+      {
+        opacity: 0,
+        y: 50,
+        duration: 0.5,
+      },
+      "<+0.15"
+    );
+</script>
