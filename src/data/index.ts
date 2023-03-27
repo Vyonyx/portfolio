@@ -42,6 +42,9 @@ export const icons = {
   },
 }
 
+const nSSL = '/project_screenshots/neighbourly/'
+const awcSSL = '/project_screenshots/at-what-cost/'
+
 export const projects: Project[] = [
   {
     name: "Neighbourly",
@@ -51,7 +54,8 @@ export const projects: Project[] = [
       "A web app that allows users to trade or give away essentials to their neighbours. The app aims to create new relationships between neighbours, leading to stronger communities. Users can upload and manage their listings, browse a marketplace to find items and communicate with other users through an instant messaging feature. The minimum viable product focuses on the trade of food and ingredients, but future updates will endeavour to create a general marketplace where neighbours can list anything to help their community (i.e school uniforms, baby clothes, services).",
     githubLink: "https://github.com/Vyonyx/neighbourly",
     liveLink: "https://neighbourly.vercel.app/",
-    skills: ['TypeScript', 'NextJS', 'Redux', 'TailwindCSS', 'MongoDB']
+    skills: ['TypeScript', 'NextJS', 'Redux', 'TailwindCSS', 'MongoDB'],
+    screenshots: [nSSL + 'home.png', nSSL + 'marketplace.png', nSSL + 'listing.png', nSSL + 'pantry.png',]
   },
   {
     name: "At What Cost",
@@ -61,7 +65,8 @@ export const projects: Project[] = [
       "A full-stack web app that helps users break down their monthly spending habits. Users can upload a bank statement in .CSV format to display a list of transactions to that they can apply filters. The app processes the user's filters and displays a cost breakdown that gives instant feedback about where a user's money is going.",
     githubLink: "https://github.com/Vyonyx/at-what-cost-FE",
     liveLink: "https://at-what-cost-fe.vercel.app/",
-    skills: ['TypeScript', 'React', 'Redux', 'MaterialUI', 'Express', 'Prisma']
+    skills: ['TypeScript', 'React', 'Redux', 'MaterialUI', 'Express', 'Prisma'],
+    screenshots: [awcSSL + 'home.png', awcSSL + 'dashboard.png', awcSSL + 'modal.png']
   },
 ];
 
