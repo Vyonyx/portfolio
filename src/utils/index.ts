@@ -9,8 +9,8 @@ export function renderAnimation(section: string) {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: cards,
-      start: "top 80%",
-      end: "top 30%",
+      start: "top 90%",
+      end: "top 50%",
       scrub: 2,
       // markers: true,
     },
