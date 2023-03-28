@@ -55,7 +55,7 @@ export const projects: Project[] = [
     githubLink: "https://github.com/Vyonyx/neighbourly",
     liveLink: "https://neighbourly.vercel.app/",
     skills: ['TypeScript', 'NextJS', 'Redux', 'TailwindCSS', 'MongoDB'],
-    screenshots: [nSSL + 'home.png', nSSL + 'marketplace.png', nSSL + 'listing.png', nSSL + 'pantry.png',]
+    screenshots: [nSSL + 'home.png', nSSL + 'marketplace.png', nSSL + 'listing.png', nSSL + 'pantry.png', nSSL + 'messages.png']
   },
   {
     name: "At What Cost",

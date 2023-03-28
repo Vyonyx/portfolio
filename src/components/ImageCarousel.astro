@@ -73,7 +73,7 @@ const { imagePaths, name } = Astro.props;
     const width = getImageWidth(false);
 
     if (width === null) {
-      container.scrollLeft = 3000;
+      container.scrollLeft = container.scrollWidth;
       imageIndex = images.length - 1;
     } else {
       container.scrollLeft -= width;
