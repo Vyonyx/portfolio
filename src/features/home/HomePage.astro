@@ -5,14 +5,17 @@ import PortfolioPreviews from "./PortfolioPreviews.astro";
 import MiscProjects from "./MiscProjects.astro";
 import ThesisPreview from "./ThesisPreview.astro";
 import AboutMe from "./AboutMe.astro";
+import Container from "../../components/Container.astro";
 ---
 
 <Layout title="SK Portfolio">
   <main class="bg-neutral-900">
     <HeroBanner />
-    <AboutMe />
-    <PortfolioPreviews />
-    <MiscProjects />
-    <ThesisPreview />
+    <Container>
+      <AboutMe />
+      <PortfolioPreviews />
+      <MiscProjects />
+      <ThesisPreview />
+    </Container>
   </main>
 </Layout>
