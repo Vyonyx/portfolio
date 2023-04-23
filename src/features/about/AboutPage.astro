@@ -4,6 +4,7 @@ import Education from "./Education.astro";
 import Experience from "./Experience.astro";
 
 import { technical } from "../../data";
+import Container from "../../components/Container.astro";
 
 const experienceSection = "experienceSection";
 const educationSection = "educationSection";
@@ -12,66 +13,71 @@ const contactSection = "contactSection";
 ---
 
 <Layout title="SK Details">
-  <main
-    class="bg-neutral-900 text-white text-sm md:text-md p-10 pt-20 md:p-20 grid grid-cols-1 lg:grid-cols-2 gap-y-20"
-  >
-    <Experience sectionID={experienceSection} />
-
+  <Container>
     <div
-      id="canvas-container"
-      class="hidden lg:flex lg:justify-center xl:justify-start"
+      class="bg-neutral-900 text-white text-sm md:text-md p-10 pt-20 md:p-20 grid grid-cols-1 lg:grid-cols-2 gap-y-20"
     >
-      <canvas id="aboutme-3d" class=""></canvas>
-    </div>
+      <Experience sectionID={experienceSection} />
 
-    <Education sectionID={educationSection} />
-
-    <section id={technicalSection} class="text-white col-span-2">
-      <h1 class="text-4xl mb-6">Technical</h1>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
-        {
-          technical.map(({ skill, description }) => {
-            return (
-              <li class="grid auto-cols-auto gap-2">
-                <span class="text-xl pt-4 border-t-2 border-white">
-                  {skill}
-                </span>
-                <span class="max-w-xs text-sm">{description}</span>
-              </li>
-            );
-          })
-        }
-      </ul>
-    </section>
-
-    <section id={contactSection} class="text-white col-span-2 max-w-lg text-lg">
-      <h1 class="text-4xl mb-6">Contact Me</h1>
-      <form
-        class="grid auto-rows-auto gap-2"
-        action="mailto:shaneel_kumar@live.com"
-        method="post"
-        enctype="text/plain"
+      <div
+        id="canvas-container"
+        class="hidden lg:flex lg:justify-center xl:justify-start"
       >
-        <label for="message" class="text-sm">Send me an email:</label>
-        <textarea
-          class="text-black w-full max-w-lg h-40 resize-none p-6"
-          name="message"
-          id="message"></textarea>
-        <button
-          class="place-self-end mt-4 mr-4 border-2 border-white hover:border-neutral-900 hover:bg-white hover:text-neutral-900 p-2"
-          type="submit"
-        >
-          Submit
-        </button>
-      </form>
-    </section>
+        <canvas id="aboutme-3d" class=""></canvas>
+      </div>
 
-    <!-- <button
+      <Education sectionID={educationSection} />
+
+      <section id={technicalSection} class="text-white col-span-2">
+        <h1 class="text-4xl mb-6">Technical</h1>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+          {
+            technical.map(({ skill, description }) => {
+              return (
+                <li class="grid auto-cols-auto gap-2">
+                  <span class="text-xl pt-4 border-t-2 border-white">
+                    {skill}
+                  </span>
+                  <span class="max-w-xs text-sm">{description}</span>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </section>
+
+      <section
+        id={contactSection}
+        class="text-white col-span-2 max-w-lg text-lg"
+      >
+        <h1 class="text-4xl mb-6">Contact Me</h1>
+        <form
+          class="grid auto-rows-auto gap-2"
+          action="mailto:shaneel_kumar@live.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="message" class="text-sm">Send me an email:</label>
+          <textarea
+            class="text-black w-full max-w-lg h-40 resize-none p-6"
+            name="message"
+            id="message"></textarea>
+          <button
+            class="place-self-end mt-4 mr-4 border-2 border-white hover:border-neutral-900 hover:bg-white hover:text-neutral-900 p-2"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </section>
+
+      <!-- <button
       class="w-40 h-16 bg-white hover:bg-neutral-900 text-neutral-900 hover:text-white hover:border-2 hover:border-white text-md"
     >
       Download CV
     </button> -->
-  </main>
+    </div>
+  </Container>
 
   <script>
     import { basicRevealAnimation, scrollRevealAnimation } from "../../utils";
