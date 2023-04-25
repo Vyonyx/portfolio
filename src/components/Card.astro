@@ -11,7 +11,12 @@ const { name, description, thumbnail, githubLink, liveLink, id } = project;
 >
   <h1 class="font-roboto text-2xl">{name}</h1>
   <p class="font-roboto text-sm lg:mb-10">{description}</p>
-  <a href={id ? `/project/${id}` : githubLink} class="w-full overflow-hidden">
+  <a
+    href={id ? `/project/${id}` : liveLink ? liveLink : githubLink}
+    class="w-full overflow-hidden"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <img
       class="hover:scale-110 ease-in duration-200"
       src={thumbnail}
