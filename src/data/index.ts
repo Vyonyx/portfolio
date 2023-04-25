@@ -73,26 +73,11 @@ export const projects: Project[] = [
 export const frontendProjects: Project[] = [
   {
     name: "NFT Card Preview",
-    thumbnail: "/project_previews/cv-builder.png",
+    thumbnail: "/project_previews/NFT-Preview-Card.png",
     description:
-      "My first React project. This frontend app allows users to quickly build a CV and save the output as a PDF.",
-    githubLink: "https://github.com/Vyonyx/cv-maker",
-  },
-  {
-    name: "Multi Step Form",
-    thumbnail: "/project_previews/clock.png",
-    description:
-      "An experimental frontend project using destructured assets to create a realistic analogue clock.",
-    githubLink: "https://github.com/shaneel-kumar/clock",
-    liveLink: "https://shaneel-kumar.github.io/clock/",
-  },
-  {
-    name: "Accordian",
-    thumbnail: "/project_previews/weather.png",
-    description:
-      "A simple frontend project that consumes a weather API. Made with vanilla Javascript and handpicked assets.",
-    githubLink: "https://github.com/Vyonyx/weather-app",
-    liveLink: "https://vyonyx.github.io/weather-app/",
+      "Card component created from design specifications, based on a challenge from Frontend Mentors. The specs outlined subtle type variations and hover states form various aspects of the component.",
+    githubLink: "https://github.com/Vyonyx/NFTPreviewCard-feMentors-Vue",
+    liveLink: "https://vyonyx.github.io/NFTPreviewCard-feMentors-Vue/",
   },
 ];
 ;
