@@ -68,7 +68,34 @@ export const projects: Project[] = [
     skills: ['TypeScript', 'React', 'Redux', 'MaterialUI', 'Express', 'Prisma'],
     screenshots: [awcSSL + 'home.png', awcSSL + 'dashboard.png', awcSSL + 'modal.png']
   },
+]
+
+export const frontendProjects: Project[] = [
+  {
+    name: "NFT Card Preview",
+    thumbnail: "/project_previews/cv-builder.png",
+    description:
+      "My first React project. This frontend app allows users to quickly build a CV and save the output as a PDF.",
+    githubLink: "https://github.com/Vyonyx/cv-maker",
+  },
+  {
+    name: "Multi Step Form",
+    thumbnail: "/project_previews/clock.png",
+    description:
+      "An experimental frontend project using destructured assets to create a realistic analogue clock.",
+    githubLink: "https://github.com/shaneel-kumar/clock",
+    liveLink: "https://shaneel-kumar.github.io/clock/",
+  },
+  {
+    name: "Accordian",
+    thumbnail: "/project_previews/weather.png",
+    description:
+      "A simple frontend project that consumes a weather API. Made with vanilla Javascript and handpicked assets.",
+    githubLink: "https://github.com/Vyonyx/weather-app",
+    liveLink: "https://vyonyx.github.io/weather-app/",
+  },
 ];
+;
 
 export const miscProjects: Project[] = [
   {
