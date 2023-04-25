@@ -79,6 +79,14 @@ export const frontendProjects: Project[] = [
     githubLink: "https://github.com/Vyonyx/NFTPreviewCard-feMentors-Vue",
     liveLink: "https://vyonyx.github.io/NFTPreviewCard-feMentors-Vue/",
   },
+  {
+    name: "Age Calcuator",
+    thumbnail: "/project_previews/Age-Calculator.png",
+    description:
+      "Age calcuator created from design specifications from Frontend Mentors. The specs outlined form validation error states and style states (hover, error, etc) and design variations at different screen sizes.",
+    githubLink: "https://github.com/Vyonyx/AgeCalculator-feMentors-Vue",
+    liveLink: "https://vyonyx.github.io/AgeCalculator-feMentors-Vue/",
+  },
 ];
 ;
 
