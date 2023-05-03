@@ -73,7 +73,7 @@ export const projects: Project[] = [
 export const frontendProjects: Project[] = [
   {
     name: "NFT Card Preview",
-    thumbnail: "/project_previews/NFT-Preview-Card.png",
+    thumbnail: "/project_previews/NFT_Card_walkthrough.gif",
     description:
       "Card component created from design specifications, based on a challenge from Frontend Mentor. The specs outlined subtle type variations and hover states form various aspects of the component.",
     githubLink: "https://github.com/Vyonyx/NFTPreviewCard-feMentors-Vue",
@@ -81,7 +81,7 @@ export const frontendProjects: Project[] = [
   },
   {
     name: "Age Calcuator",
-    thumbnail: "/project_previews/Age-Calculator.png",
+    thumbnail: "/project_previews/Age_Calculator_walkthrough.gif",
     description:
       "Age calcuator created from design specifications from Frontend Mentor. The specs outlined form validation error states, styling (colors, hover, error, etc) and two size variations.",
     githubLink: "https://github.com/Vyonyx/AgeCalculator-feMentors-Vue",
