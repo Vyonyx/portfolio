@@ -72,6 +72,14 @@ export const projects: Project[] = [
 
 export const frontendProjects: Project[] = [
   {
+    name: "URL Shortening API",
+    thumbnail: "/project_previews/Url-Shortening-API-walkthrough.gif",
+    description:
+      "A simple webpage that allows user's to shorten urls. The user's urls are shortened using an API and stored in local storage. This project is based on Frontend Mentor's project specifications.",
+    githubLink: "https://github.com/Vyonyx/URLShorteningAPI-feMentor-Vue",
+    liveLink: "https://vyonyx.github.io/URLShorteningAPI-feMentor-Vue/",
+  },
+  {
     name: "NFT Card Preview",
     thumbnail: "/project_previews/NFT_Card_walkthrough.gif",
     description:
