@@ -55,7 +55,8 @@ export const projects: Project[] = [
     githubLink: "https://github.com/Vyonyx/neighbourly",
     liveLink: "https://neighbourly.vercel.app/",
     skills: ['TypeScript', 'NextJS', 'Redux', 'TailwindCSS', 'MongoDB'],
-    screenshots: [nSSL + 'home.png', nSSL + 'marketplace.png', nSSL + 'listing.png', nSSL + 'pantry.png', nSSL + 'messages.png']
+    screenshots: [nSSL + 'home.png', nSSL + 'marketplace.png', nSSL + 'listing.png', nSSL + 'pantry.png', nSSL + 'messages.png'],
+    video: "/video-walkthroughs/neighbourly-recording.mov"
   },
   {
     name: "At What Cost",
@@ -66,7 +67,8 @@ export const projects: Project[] = [
     githubLink: "https://github.com/Vyonyx/at-what-cost-FE",
     liveLink: "https://at-what-cost-fe.vercel.app/",
     skills: ['TypeScript', 'React', 'Redux', 'MaterialUI', 'Express', 'Prisma'],
-    screenshots: [awcSSL + 'home.png', awcSSL + 'dashboard.png', awcSSL + 'modal.png']
+    screenshots: [awcSSL + 'home.png', awcSSL + 'dashboard.png', awcSSL + 'modal.png'],
+    video: "/video-walkthroughs/at_what_cost_recording.mov"
   },
 ]
 
