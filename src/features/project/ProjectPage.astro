@@ -17,6 +17,7 @@ const {
   liveLink,
   skills,
   screenshots,
+  video,
 } = projectDetails;
 ---
 
@@ -33,6 +34,18 @@ const {
       {name}
     </h1>
     <p class="text-justify">{description}</p>
+
+    {
+      video && (
+        <video
+          class="hidden md:block"
+          width="100%"
+          height="auto"
+          src={video}
+          controls
+        />
+      )
+    }
 
     {screenshots && <ImageCarousel imagePaths={screenshots} name={name} />}
 

@@ -9,4 +9,5 @@ export interface Project {
   description: string;
   githubLink?: string;
   liveLink?: string;
+  video?: string;
 }
