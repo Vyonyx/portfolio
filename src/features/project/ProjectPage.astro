@@ -12,12 +12,12 @@ if (!projectDetails) return;
 const {
   name,
   description,
-  thumbnail,
   githubLink,
   liveLink,
   skills,
   screenshots,
   video,
+  learnings,
 } = projectDetails;
 ---
 
@@ -57,6 +57,17 @@ const {
           {githubLink && <GithubLink githubLink={githubLink} />}
           {liveLink && <LiveLink liveLink={liveLink} />}
         </ul>
+      )
+    }
+
+    {
+      learnings && (
+        <article>
+          <h3 class="text-4xl text-center mt-6 mb-12">Learnings</h3>
+          {learnings.map((learning) => (
+            <p class="mb-12">{learning}</p>
+          ))}
+        </article>
       )
     }
   </main>

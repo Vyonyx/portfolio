@@ -1,49 +1,49 @@
 import type { Project } from "../env";
 
-export const NEIGHBOURLY_ID = 'neighbourly'
-export const AT_WHAT_COST_ID = 'at-what-cost'
+export const NEIGHBOURLY_ID = "neighbourly";
+export const AT_WHAT_COST_ID = "at-what-cost";
 
 export const icons = {
-  'React': {
-    path: '/icons/React.svg',
-    link: 'https://react.dev/',
+  React: {
+    path: "/icons/React.svg",
+    link: "https://react.dev/",
   },
-  'Express': {
-    path: '/icons/Express.svg',
-    link: 'https://expressjs.com/',
+  Express: {
+    path: "/icons/Express.svg",
+    link: "https://expressjs.com/",
   },
-  'MaterialUI': {
-    path: '/icons/MaterialUI.svg',
-    link: 'https://mui.com/',
+  MaterialUI: {
+    path: "/icons/MaterialUI.svg",
+    link: "https://mui.com/",
   },
-  'MongoDB': {
-    path: '/icons/MongoDB.svg',
-    link: 'https://www.mongodb.com/',
+  MongoDB: {
+    path: "/icons/MongoDB.svg",
+    link: "https://www.mongodb.com/",
   },
-  'NextJS': {
-    path: '/icons/NextJS.svg',
-    link: 'https://nextjs.org/',
+  NextJS: {
+    path: "/icons/NextJS.svg",
+    link: "https://nextjs.org/",
   },
-  'Prisma': {
-    path: '/icons/Prisma.svg',
-    link: 'https://www.prisma.io/',
+  Prisma: {
+    path: "/icons/Prisma.svg",
+    link: "https://www.prisma.io/",
   },
-  'Redux': {
-    path: '/icons/Redux.svg',
-    link: 'https://redux.js.org/',
+  Redux: {
+    path: "/icons/Redux.svg",
+    link: "https://redux.js.org/",
   },
-  'TailwindCSS': {
-    path: '/icons/TailwindCSS.svg',
-    link: 'https://tailwindcss.com/',
+  TailwindCSS: {
+    path: "/icons/TailwindCSS.svg",
+    link: "https://tailwindcss.com/",
   },
-  'TypeScript': {
-    path: '/icons/TypeScript.svg',
-    link: 'https://www.typescriptlang.org/',
+  TypeScript: {
+    path: "/icons/TypeScript.svg",
+    link: "https://www.typescriptlang.org/",
   },
-}
+};
 
-const nSSL = '/project_screenshots/neighbourly/'
-const awcSSL = '/project_screenshots/at-what-cost/'
+const nSSL = "/project_screenshots/neighbourly/";
+const awcSSL = "/project_screenshots/at-what-cost/";
 
 export const projects: Project[] = [
   {
@@ -54,23 +54,41 @@ export const projects: Project[] = [
       "A web app that allows users to trade or give away essentials to their neighbours. The app aims to create new relationships between neighbours, leading to stronger communities. Users can upload and manage their listings, browse a marketplace to find items and communicate with other users through an instant messaging feature. The minimum viable product focuses on the trade of food and ingredients, but future updates will endeavour to create a general marketplace where neighbours can list anything to help their community (i.e school uniforms, baby clothes, services).",
     githubLink: "https://github.com/Vyonyx/neighbourly",
     liveLink: "https://neighbourly.vercel.app/",
-    skills: ['TypeScript', 'NextJS', 'Redux', 'TailwindCSS', 'MongoDB'],
-    screenshots: [nSSL + 'home.png', nSSL + 'marketplace.png', nSSL + 'listing.png', nSSL + 'pantry.png', nSSL + 'messages.png'],
-    video: "/video-walkthroughs/neighbourly-recording.mov"
+    skills: ["TypeScript", "NextJS", "Redux", "TailwindCSS", "MongoDB"],
+    screenshots: [
+      nSSL + "home.png",
+      nSSL + "marketplace.png",
+      nSSL + "listing.png",
+      nSSL + "pantry.png",
+      nSSL + "messages.png",
+    ],
+    video: "/video-walkthroughs/neighbourly-recording.mov",
+    learnings: [
+      "Storing user uploaded images was a new experience for me as I had not dealt with cloud based simple storage before. The upload process involved streaming an image from a user's file system to a cloud API (DigitalOcean), which would then send back a url. This url was then stored in a database (Google Cloud), along with the rest of the user's details. Gracefully handling errors was important during this process as it required promises from two different APIs. I found the implementation simple as I was dealing with two well designed APIs and the experience made me more confident when using cloud services.",
+      "Another learning occured after I had implemented the Ably API for the instant messaging feature. Dealing with Ably's SDK syntax was difficult because the library used design patterns that I was not familiar with. I had to study the documentation in depth and experiment with the API before commiting to it's use. This process taught me the importance of reseach during the planning stage and the importance of developing a simple proof of concept before starting the project (if using technologies that I am not familiar with). This experience gave me more confidence when working with new technologies as I was confident in my ability to iterate and experiment with code that I was not entirely familiar with.",
+    ],
   },
   {
     name: "At What Cost",
     id: AT_WHAT_COST_ID,
     thumbnail: "/project_previews/at_what_cost_walkthrough.gif",
     description:
-      "A full-stack web app that helps users break down their monthly spending habits. Users can upload a bank statement in .CSV format to display a list of transactions to that they can apply filters. The app processes the user's filters and displays a cost breakdown that gives instant feedback about where a user's money is going.",
+      "A full-stack web app that helps users break down their monthly SReflectionjpending habits. Users can upload a bank statement in .CSV format to display a list of transactions to that they can apply filters. The app processes the user's filters and displays a cost breakdown that gives instant feedback about where a user's money is going.",
     githubLink: "https://github.com/Vyonyx/at-what-cost-FE",
     liveLink: "https://at-what-cost-fe.vercel.app/",
-    skills: ['TypeScript', 'React', 'Redux', 'MaterialUI', 'Express', 'Prisma'],
-    screenshots: [awcSSL + 'home.png', awcSSL + 'dashboard.png', awcSSL + 'modal.png'],
-    video: "/video-walkthroughs/at_what_cost_recording.mov"
+    skills: ["TypeScript", "React", "Redux", "MaterialUI", "Express", "Prisma"],
+    screenshots: [
+      awcSSL + "home.png",
+      awcSSL + "dashboard.png",
+      awcSSL + "modal.png",
+    ],
+    video: "/video-walkthroughs/at_what_cost_recording.mov",
+    learnings: [
+      "This project was my first attempt at trying to host an Express server online. I researched a few services, trying to find a free/cheap option that was also simple to use. I chose to host my server and an instance of Postgresql on a 'Platform as a Service' called Railway. It took me a few days to get the different services online and working together. This experience highlighted the problems that containerisation solves and I am excited to use docker on future projects that have a similar architecture.",
+      "I chose to try Auth0 for this project as it was a universal API for authorisation, and while it worked in development, it unfortunately failed in production. The root of the issue was an error occuring between Auth0 validating a user and the callback to my website. I tried solving this issue for a week and eventually made the decision to use another authorisation method as there was no feedback (logs, stack trace, etc) that I could use to solve the problem definitively. The documentation and help available online was limited as the technology versions were new and lacked documentation (React 18, React Router 6 and Auth0). I chose to implement authorisation using JSON web tokens in the end and managed to get it working in production. This experience taught me that it is risky to use new versions of technologies without testing integration in production beforhand.",
+    ],
   },
-]
+];
 
 export const frontendProjects: Project[] = [
   {
@@ -98,8 +116,6 @@ export const frontendProjects: Project[] = [
     liveLink: "https://vyonyx.github.io/AgeCalculator-feMentors-Vue/",
   },
 ];
-;
-
 export const miscProjects: Project[] = [
   {
     name: "CV Builder",
@@ -204,4 +220,3 @@ export const technical: Technical[] = [
     description: `Used to plan and wireframe mobile-first designs, and to create custom assets`,
   },
 ];
-
