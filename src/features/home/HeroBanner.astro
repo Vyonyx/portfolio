@@ -3,7 +3,7 @@ import InfiniteScrollText from "../../components/InfiniteScrollText.astro";
 ---
 
 <section
-  class="relative h-screen flex flex-col font-serif items-center justify-center text-center bg-neutral-900 bg-cover bg-center bg-[url(/final-aerial.jpg)]"
+  class="relative h-screen flex flex-col font-serif items-center justify-center text-center bg-neutral-900 bg-cover bg-center bg-[url(/final-aerial.jpg)] bg-fixed"
 >
   <div
     id="bg-cover"
@@ -114,19 +114,5 @@ import InfiniteScrollText from "../../components/InfiniteScrollText.astro";
     repeat: -1,
     yoyo: true,
     ease: "linear",
-  });
-
-  const hideTL = gsap.timeline({
-    scrollTrigger: {
-      trigger: coverElement,
-      start: "bottom 95%",
-      end: "bottom 90%",
-      scrub: 2,
-    },
-  });
-
-  hideTL.to(coverElement, {
-    opacity: 1,
-    ease: "power4",
   });
 </script>
