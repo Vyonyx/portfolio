@@ -16,12 +16,25 @@ const { name, description, thumbnail, githubLink, liveLink, id } = project;
     class="w-full overflow-hidden"
     target="_blank"
     rel="noopener noreferrer"
+    aria-label={id
+      ? `Continue to ${name} project page to learn more`
+      : liveLink
+      ? `Continue to live preview of ${name}`
+      : `See further information on ${name} by visiting its GitHub page`}
   >
-    <img
-      class="hover:scale-110 ease-in duration-200"
-      src={thumbnail}
-      alt={`${name} project by Shaneel Kumar`}
-    />
+    {
+      thumbnail.search(".webm") !== -1 ? (
+        <video autoplay muted loop>
+          <source src={thumbnail} type="video/webm" />
+        </video>
+      ) : (
+        <img
+          class="hover:scale-110 ease-in duration-200"
+          src={thumbnail}
+          alt={`${name} project by Shaneel Kumar`}
+        />
+      )
+    }
   </a>
 
   {
@@ -30,14 +43,15 @@ const { name, description, thumbnail, githubLink, liveLink, id } = project;
         class="text-xl mx-auto py-1 px-4 border-2 border-white hover:border-highlight"
         href={`/project/${id}`}
         target="_blank"
+        aria-label={`Continue to ${name} project page to learn more`}
       >
         Details
       </a>
     ) : (
       <span class="flex justify-center gap-10 justify-self-end">
-        {githubLink && <GithubLink githubLink={githubLink} />}
+        {githubLink && <GithubLink name={name} githubLink={githubLink} />}
 
-        {liveLink && <LiveLink liveLink={liveLink} />}
+        {liveLink && <LiveLink name={name} liveLink={liveLink} />}
       </span>
     )
   }

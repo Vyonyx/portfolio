@@ -49,7 +49,7 @@ export const projects: Project[] = [
   {
     name: "Neighbourly",
     id: NEIGHBOURLY_ID,
-    thumbnail: "/project_previews/neighbourly_walkthrough.gif",
+    thumbnail: "/project_previews/Neighbourly-recording.webm",
     description:
       "A web app that allows users to trade or give away essentials to their neighbours. The app aims to create new relationships between neighbours, leading to stronger communities. Users can upload and manage their listings, browse a marketplace to find items and communicate with other users through an instant messaging feature. The minimum viable product focuses on the trade of food and ingredients, but future updates will endeavour to create a general marketplace where neighbours can list anything to help their community (i.e school uniforms, baby clothes, services).",
     githubLink: "https://github.com/Vyonyx/neighbourly",
@@ -71,7 +71,7 @@ export const projects: Project[] = [
   {
     name: "At What Cost",
     id: AT_WHAT_COST_ID,
-    thumbnail: "/project_previews/at_what_cost_walkthrough.gif",
+    thumbnail: "/project_previews/At-What-Cost-recording.webm",
     description:
       "A full-stack web app that helps users break down their monthly SReflectionjpending habits. Users can upload a bank statement in .CSV format to display a list of transactions to that they can apply filters. The app processes the user's filters and displays a cost breakdown that gives instant feedback about where a user's money is going.",
     githubLink: "https://github.com/Vyonyx/at-what-cost-FE",
@@ -93,7 +93,7 @@ export const projects: Project[] = [
 export const frontendProjects: Project[] = [
   {
     name: "URL Shortening API",
-    thumbnail: "/project_previews/Url-Shortening-API-walkthrough.gif",
+    thumbnail: "/project_previews/URL-Shortening-API-recording.webm",
     description:
       "A simple webpage that allows user's to shorten urls. The user's urls are shortened using an API and stored in local storage. This project is based on Frontend Mentor's project specifications.",
     githubLink: "https://github.com/Vyonyx/URLShorteningAPI-feMentor-Vue",
@@ -101,7 +101,7 @@ export const frontendProjects: Project[] = [
   },
   {
     name: "NFT Card Preview",
-    thumbnail: "/project_previews/NFT_Card_walkthrough.gif",
+    thumbnail: "/project_previews/NFT-Card-recording.webm",
     description:
       "Card component created from design specifications, based on a challenge from Frontend Mentor. The specs outlined subtle type variations and hover states form various aspects of the component.",
     githubLink: "https://github.com/Vyonyx/NFTPreviewCard-feMentors-Vue",
@@ -109,7 +109,7 @@ export const frontendProjects: Project[] = [
   },
   {
     name: "Age Calcuator",
-    thumbnail: "/project_previews/Age_Calculator_walkthrough.gif",
+    thumbnail: "/project_previews/Age-Calculator-recording.webm",
     description:
       "Age calcuator created from design specifications from Frontend Mentor. The specs outlined form validation error states, styling (colors, hover, error, etc) and two size variations.",
     githubLink: "https://github.com/Vyonyx/AgeCalculator-feMentors-Vue",
@@ -119,14 +119,14 @@ export const frontendProjects: Project[] = [
 export const miscProjects: Project[] = [
   {
     name: "CV Builder",
-    thumbnail: "/project_previews/cv-builder.png",
+    thumbnail: "/project_previews/cv-builder.webp",
     description:
       "My first React project. This frontend app allows users to quickly build a CV and save the output as a PDF.",
     githubLink: "https://github.com/Vyonyx/cv-maker",
   },
   {
     name: "Analog Clock",
-    thumbnail: "/project_previews/clock.png",
+    thumbnail: "/project_previews/clock.webp",
     description:
       "An experimental frontend project using destructured assets to create a realistic analogue clock.",
     githubLink: "https://github.com/shaneel-kumar/clock",
@@ -134,7 +134,7 @@ export const miscProjects: Project[] = [
   },
   {
     name: "Weather App",
-    thumbnail: "/project_previews/weather.png",
+    thumbnail: "/project_previews/weather.webp",
     description:
       "A simple frontend project that consumes a weather API. Made with vanilla Javascript and handpicked assets.",
     githubLink: "https://github.com/Vyonyx/weather-app",

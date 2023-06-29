@@ -1,16 +1,18 @@
 ---
 interface Props {
   githubLink: string;
+  name: string;
 }
 
 const iconSize = "24";
-const { githubLink } = Astro.props;
+const { githubLink, name } = Astro.props;
 ---
 
 <a
   class="flex items-center gap-2 hover:text-highlight fill-white hover:fill-highlight"
   href={githubLink}
   target="_blank"
+  aria-label={`See further information on ${name} by visiting its GitHub page`}
 >
   <svg
     class="fill-inherit hover:fill-inherit"

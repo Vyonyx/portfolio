@@ -1,16 +1,18 @@
 ---
 interface Props {
   liveLink: string;
+  name: string;
 }
 
 const iconSize = "24";
-const { liveLink } = Astro.props;
+const { liveLink, name } = Astro.props;
 ---
 
 <a
   class="flex items-center gap-2 hover:text-highlight fill-white hover:fill-highlight"
   href={liveLink}
   target="_blank"
+  aria-label={`Continue to live preview of ${name}`}
 >
   <svg
     class="fill-inherit hover:fill-inherit"
