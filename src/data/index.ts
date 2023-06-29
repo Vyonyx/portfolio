@@ -119,14 +119,14 @@ export const frontendProjects: Project[] = [
 export const miscProjects: Project[] = [
   {
     name: "CV Builder",
-    thumbnail: "/project_previews/cv-builder.png",
+    thumbnail: "/project_previews/cv-builder.webp",
     description:
       "My first React project. This frontend app allows users to quickly build a CV and save the output as a PDF.",
     githubLink: "https://github.com/Vyonyx/cv-maker",
   },
   {
     name: "Analog Clock",
-    thumbnail: "/project_previews/clock.png",
+    thumbnail: "/project_previews/clock.webp",
     description:
       "An experimental frontend project using destructured assets to create a realistic analogue clock.",
     githubLink: "https://github.com/shaneel-kumar/clock",
@@ -134,7 +134,7 @@ export const miscProjects: Project[] = [
   },
   {
     name: "Weather App",
-    thumbnail: "/project_previews/weather.png",
+    thumbnail: "/project_previews/weather.webp",
     description:
       "A simple frontend project that consumes a weather API. Made with vanilla Javascript and handpicked assets.",
     githubLink: "https://github.com/Vyonyx/weather-app",
