@@ -19,7 +19,9 @@ const { name, description, thumbnail, githubLink, liveLink, id } = project;
   >
     {
       thumbnail.search(".webm") !== -1 ? (
-        <video src={thumbnail} autoplay loop />
+        <video autoplay muted loop>
+          <source src={thumbnail} type="video/webm" />
+        </video>
       ) : (
         <img
           class="hover:scale-110 ease-in duration-200"
