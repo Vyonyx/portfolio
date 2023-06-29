@@ -17,11 +17,17 @@ const { name, description, thumbnail, githubLink, liveLink, id } = project;
     target="_blank"
     rel="noopener noreferrer"
   >
-    <img
-      class="hover:scale-110 ease-in duration-200"
-      src={thumbnail}
-      alt={`${name} project by Shaneel Kumar`}
-    />
+    {
+      thumbnail.search(".webm") !== -1 ? (
+        <video src={thumbnail} autoplay loop />
+      ) : (
+        <img
+          class="hover:scale-110 ease-in duration-200"
+          src={thumbnail}
+          alt={`${name} project by Shaneel Kumar`}
+        />
+      )
+    }
   </a>
 
   {
