@@ -53,7 +53,7 @@ export const projects: Project[] = [
     description:
       "A web app that allows users to trade or give away essentials to their neighbours. The app aims to create new relationships between neighbours, leading to stronger communities. Users can upload and manage their listings, browse a marketplace to find items and communicate with other users through an instant messaging feature. The minimum viable product focuses on the trade of food and ingredients, but future updates will endeavour to create a general marketplace where neighbours can list anything to help their community (i.e school uniforms, baby clothes, services).",
     githubLink: "https://github.com/Vyonyx/neighbourly",
-    liveLink: "https://neighbourly.vercel.app/",
+    // liveLink: "https://neighbourly.vercel.app/",
     skills: ["TypeScript", "NextJS", "Redux", "TailwindCSS", "MongoDB"],
     screenshots: [
       nSSL + "home.png",
