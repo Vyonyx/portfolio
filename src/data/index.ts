@@ -95,7 +95,7 @@ export const frontendProjects: Project[] = [
     name: "URL Shortening API",
     thumbnail: "/project_previews/URL-Shortening-API-recording.webm",
     description:
-      "A simple webpage that allows user's to shorten urls. The user's urls are shortened using an API and stored in local storage. This project is based on Frontend Mentor's project specifications.",
+      "Web app created from design design specifications, based on a challenge on Fontend Mentor. A simple webpage that allows user's to shorten urls, with results being stored within local storage.",
     githubLink: "https://github.com/Vyonyx/URLShorteningAPI-feMentor-Vue",
     liveLink: "https://vyonyx.github.io/URLShorteningAPI-feMentor-Vue/",
   },
@@ -103,32 +103,33 @@ export const frontendProjects: Project[] = [
     name: "NFT Card Preview",
     thumbnail: "/project_previews/NFT-Card-recording.webm",
     description:
-      "Card component created from design specifications, based on a challenge from Frontend Mentor. The specs outlined subtle type variations and hover states form various aspects of the component.",
+      "Card component created from design specifications, based on a challenge on Frontend Mentor. The specs outlined subtle type variations and hover states form various aspects of the component.",
     githubLink: "https://github.com/Vyonyx/NFTPreviewCard-feMentors-Vue",
     liveLink: "https://vyonyx.github.io/NFTPreviewCard-feMentors-Vue/",
   },
   {
-    name: "Age Calcuator",
-    thumbnail: "/project_previews/Age-Calculator-recording.webm",
+    name: "Pomodoro Timer",
+    thumbnail: "/project_previews/Pomodoro-recording.webm",
     description:
-      "Age calcuator created from design specifications from Frontend Mentor. The specs outlined form validation error states, styling (colors, hover, error, etc) and two size variations.",
-    githubLink: "https://github.com/Vyonyx/AgeCalculator-feMentors-Vue",
-    liveLink: "https://vyonyx.github.io/AgeCalculator-feMentors-Vue/",
+      "Web app created from design design specifications, based on a challenge on Fontend Mentor. This app is used to track blocks time to enhance productivity, famously known as the pomodoro technique.",
+    githubLink: "https://github.com/Vyonyx/pomodoro",
+    liveLink: "https://vyonyx.github.io/pomodoro/",
   },
 ];
 export const miscProjects: Project[] = [
   {
-    name: "CV Builder",
-    thumbnail: "/project_previews/cv-builder.webp",
+    name: "Age Calcuator",
+    thumbnail: "/project_previews/Age-Calculator-recording.webm",
     description:
-      "My first React project. This frontend app allows users to quickly build a CV and save the output as a PDF.",
-    githubLink: "https://github.com/Vyonyx/cv-maker",
+      "Age calcuator created from design specifications, based on a challenge on Frontend Mentor. This app is used to calculate a person's age using a form.",
+    githubLink: "https://github.com/Vyonyx/AgeCalculator-feMentors-Vue",
+    liveLink: "https://vyonyx.github.io/AgeCalculator-feMentors-Vue/",
   },
   {
     name: "Analog Clock",
     thumbnail: "/project_previews/clock.webp",
     description:
-      "An experimental frontend project using destructured assets to create a realistic analogue clock.",
+      "An experimental frontend project using destructured assets and CSS shadows to create a realistic analogue clock with sound.",
     githubLink: "https://github.com/shaneel-kumar/clock",
     liveLink: "https://shaneel-kumar.github.io/clock/",
   },
